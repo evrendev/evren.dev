@@ -1,0 +1,139 @@
+<script setup>
+import { useAppStore } from "@/stores"
+import { storeToRefs } from "pinia"
+
+const appStore = useAppStore()
+const { showPreloader } = storeToRefs(appStore)
+</script>
+
+<template>
+  <div
+    id="preloader"
+    :class="{ preloaded: showPreloader }"
+    v-show="showPreloader"
+  >
+    <div class="loader_line"></div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 99999;
+  display: flex;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-color: #000;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  &:after {
+    left: auto;
+    right: 0;
+  }
+
+  .loader_line {
+    margin: auto;
+    width: 1px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 1px;
+      height: 0%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      background-color: #fff;
+      -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+      -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+      animation: lineheight 1000ms ease-in-out 0s forwards;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+      background-color: #999999;
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+      transform: translateY(-100%);
+      -webkit-animation: lineround 1200ms linear 0s infinite;
+      -o-animation: lineround 1200ms linear 0s infinite;
+      animation: lineround 1200ms linear 0s infinite;
+      animation-delay: 2000ms;
+    }
+  }
+
+  @keyframes lineheight {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+
+  @keyframes lineround {
+    0% {
+      -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+      -o-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+    100% {
+      -webkit-transform: translateY(200%);
+      -ms-transform: translateY(200%);
+      -o-transform: translateY(200%);
+      transform: translateY(200%);
+    }
+  }
+}
+
+/*hiding all*/
+.preloaded .loader_line .preloaded .loader_line {
+  opacity: 0;
+  height: 100% !important;
+}
+.preloaded:before,
+.preloaded:after {
+  -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+  -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+  animation: preloadedzero 300ms ease-in-out 500ms forwards;
+}
+@keyframes preloadedzero {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+</style>
