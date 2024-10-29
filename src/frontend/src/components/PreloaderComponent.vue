@@ -7,11 +7,7 @@ const { showPreloader } = storeToRefs(appStore)
 </script>
 
 <template>
-  <div
-    id="preloader"
-    :class="{ preloaded: showPreloader }"
-    v-show="showPreloader"
-  >
+  <div id="preloader" :class="{ preloaded: !showPreloader }">
     <div class="loader_line"></div>
   </div>
 </template>

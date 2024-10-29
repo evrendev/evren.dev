@@ -2,11 +2,11 @@ import { defineStore } from "pinia"
 
 export const useAppStore = defineStore("app", {
   state: () => ({
-    showLoader: false,
+    showPreloader: true,
   }),
   actions: {
-    toggleLoader() {
-      this.showLoader = !this.showLoader
+    togglePreloader() {
+      this.showPreloader = !this.showPreloader
     },
   },
 })
