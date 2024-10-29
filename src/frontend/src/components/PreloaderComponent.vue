@@ -115,25 +115,28 @@ const { showPreloader } = storeToRefs(appStore)
       transform: translateY(200%);
     }
   }
-}
 
-/*hiding all*/
-.preloaded .loader_line .preloaded .loader_line {
-  opacity: 0;
-  height: 100% !important;
-}
-.preloaded:before,
-.preloaded:after {
-  -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
-  -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
-  animation: preloadedzero 300ms ease-in-out 500ms forwards;
-}
-@keyframes preloadedzero {
-  0% {
-    width: 50%;
-  }
-  100% {
-    width: 0%;
+  &.preloaded {
+    .loader_line {
+      opacity: 0;
+      height: 100% !important;
+    }
+
+    &::before,
+    &::after {
+      -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+      -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+      animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    }
+
+    @keyframes preloadedzero {
+      0% {
+        width: 50%;
+      }
+      100% {
+        width: 0%;
+      }
+    }
   }
 }
 </style>
