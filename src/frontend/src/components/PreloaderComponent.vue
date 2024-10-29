@@ -113,6 +113,8 @@ const { showPreloader } = storeToRefs(appStore)
   }
 
   &.preloaded {
+    display: none;
+
     .loader_line {
       opacity: 0;
       height: 100% !important;
