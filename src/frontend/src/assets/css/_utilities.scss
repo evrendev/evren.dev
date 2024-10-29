@@ -1,0 +1,261 @@
+.abs_image {
+  position: relative;
+
+  img {
+    opacity: 0;
+    min-width: 100%;
+  }
+
+  .main {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.line_effect {
+  text-decoration: none;
+  color: currentColor;
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 3px;
+    transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+    background: currentColor;
+  }
+
+  &:hover:after {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+}
+
+.text_hover_effect {
+  position: relative;
+  display: inline;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.5s;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+  }
+
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+.page_section {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 8;
+  transition:
+    visibility 1s linear,
+    opacity 0s linear;
+  -moz-transition:
+    visibility 1s linear,
+    opacity 0s linear;
+  -webkit-transition:
+    visibility1s linear,
+    opacity 0s linear;
+  -o-transition:
+    visibility 1s linear,
+    opacity 0s linear;
+
+  &.animated {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+.tm_text_effect {
+  span {
+    display: block;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    transform: translateY(100%);
+  }
+
+  &:hover {
+    .before {
+      transform: translateY(-100%);
+    }
+
+    .after {
+      transform: translateY(0);
+    }
+  }
+}
+
+.page_full_link {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.page_button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #000;
+    transform: translateY(100%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  &:hover:before {
+    transform: translateY(0);
+  }
+
+  span {
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  a {
+    display: block;
+    padding: 15px 35px;
+    background-color: #666;
+  }
+}
+
+.tm_borders {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 70px;
+  right: 70px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  z-index: -11;
+}
+
+.tm_borders2 {
+  position: fixed;
+  top: 70px;
+  bottom: 70px;
+  left: 0px;
+  right: 0px;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: -11;
+}
+
+.page_flexbox {
+  width: 100%;
+  display: flex;
+
+  @media (max-width: 1040px) {
+    flex-direction: column;
+  }
+
+  .leftbox {
+    width: 50%;
+    padding-right: 50px;
+
+    @media (max-width: 1040px) {
+      width: 100%;
+      padding-right: 0px;
+      margin-bottom: 100px;
+    }
+  }
+
+  .rightbox {
+    width: 50%;
+    padding-left: 50px;
+
+    @media (max-width: 1040px) {
+      width: 100%;
+      padding-left: 0px;
+    }
+  }
+}
+
+.page_title {
+  width: 100%;
+
+  h3 {
+    font-size: 17px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px 50px;
+  }
+}
