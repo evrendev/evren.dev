@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="home">
-    <span>Home</span>
+  <div class="about">
+    <span>About</span>
   </div>
 </template>

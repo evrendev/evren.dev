@@ -201,6 +201,15 @@
   border-left: 1px solid #e0e0e0;
   border-right: 1px solid #e0e0e0;
   z-index: -11;
+
+  @media (max-width: 1600px) {
+    left: 55px;
+    right: 55px;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .page_borders2 {
@@ -212,6 +221,17 @@
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   z-index: -11;
+
+  @media (max-width: 1600px) {
+    left: 55px;
+    right: 55px;
+    top: 55px;
+    bottom: 55px;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 }
 
 .page_flexbox {
