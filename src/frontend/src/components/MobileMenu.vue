@@ -178,6 +178,10 @@ const toggleMenu = () => {
 
         a {
           color: #000;
+
+          &.active {
+            font-weight: 700;
+          }
         }
       }
     }
