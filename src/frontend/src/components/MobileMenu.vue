@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router"
-import "hamburgers/_sass/hamburgers/hamburgers.scss"
+import "hamburgers/dist/hamburgers.min.css"
 import { ref } from "vue"
 
 let isOpened = ref(false)
