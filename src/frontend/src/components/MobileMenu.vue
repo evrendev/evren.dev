@@ -39,10 +39,14 @@ const toggleMenu = () => {
     <div class="menu_list">
       <ul class="transition_link">
         <li>
-          <router-link :to="{ name: 'home' }">Home</router-link>
+          <router-link :to="{ name: 'home' }" @click="toggleMenu"
+            >Home</router-link
+          >
         </li>
         <li>
-          <router-link :to="{ name: 'about' }">About</router-link>
+          <router-link :to="{ name: 'about' }" @click="toggleMenu"
+            >About</router-link
+          >
         </li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#news">News</a></li>
