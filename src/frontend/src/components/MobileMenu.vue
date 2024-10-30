@@ -6,6 +6,8 @@ import { ref } from "vue"
 
 let isOpened = ref(false)
 
+let currentYear = ref(new Date().getFullYear())
+
 const toggleMenu = () => {
   isOpened.value = !isOpened.value
 }
@@ -73,7 +75,7 @@ const toggleMenu = () => {
         </ul>
       </div>
       <div class="copyright">
-        <p>&copy; 2024 Tramp. All rights are reserved</p>
+        <p>&copy; {{ currentYear }} Evren.dev<br />All rights are reserved</p>
       </div>
     </div>
   </div>
@@ -209,17 +211,16 @@ const toggleMenu = () => {
         li {
           margin-right: 10px;
 
+          a {
+            transition: all 0.3s ease;
+
+            svg {
+              fill: black;
+            }
+          }
+
           &:last-child {
             margin-right: 0px;
-
-            a {
-              color: var(--bc);
-              transition: all 0.3s ease;
-
-              &:hover {
-                color: #000;
-              }
-            }
           }
         }
       }
