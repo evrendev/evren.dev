@@ -1,6 +1,7 @@
 <script setup>
-import { RouterLink } from "vue-router"
 import "hamburgers/dist/hamburgers.min.css"
+import { SvgIcon } from "."
+import { RouterLink } from "vue-router"
 import { ref } from "vue"
 
 let isOpened = ref(false)
@@ -50,20 +51,24 @@ const toggleMenu = () => {
       <div class="social">
         <ul>
           <li>
-            <a href="#"><img class="svg" src="@/assets/icons/github.svg" /></a>
+            <a href="#">
+              <svg-icon name="github" />
+            </a>
           </li>
           <li>
-            <a href="#"
-              ><img class="svg" src="@/assets/icons/leetcode.svg"
-            /></a>
+            <a href="#">
+              <svg-icon name="leetcode" />
+            </a>
           </li>
           <li>
-            <a href="#"
-              ><img class="svg" src="@/assets/icons/linkedin.svg"
-            /></a>
+            <a href="#">
+              <svg-icon name="linkedin" />
+            </a>
           </li>
           <li>
-            <a href="#"><img class="svg" src="@/assets/icons/twitter.svg" /></a>
+            <a href="#">
+              <svg-icon name="twitter" />
+            </a>
           </li>
         </ul>
       </div>
