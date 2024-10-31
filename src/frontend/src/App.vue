@@ -1,9 +1,9 @@
 <script setup>
 import {
   Preloader,
-  PageBorders,
-  PageHeader,
-  PageContent,
+  Borders,
+  HeaderMenu,
+  Content,
   MobileMenu,
 } from "./components"
 </script>
@@ -12,13 +12,13 @@ import {
   <preloader />
 
   <div class="wrapper">
-    <page-borders />
+    <borders />
 
     <mobile-menu />
 
-    <page-header />
+    <header-menu />
 
-    <page-content />
+    <content />
   </div>
 </template>
 
