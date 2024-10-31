@@ -1,13 +1,27 @@
 import { fileURLToPath, URL } from "node:url"
-
+import { resolve, dirname } from "path"
 import { defineConfig } from "vite"
+import { manualChunksPlugin } from "vite-plugin-webpackchunkname"
 import vue from "@vitejs/plugin-vue"
-import vueDevTools from "vite-plugin-vue-devtools"
 import svgLoader from "vite-svg-loader"
+import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
+import vueDevTools from "vite-plugin-vue-devtools"
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueDevTools(), svgLoader()],
+  plugins: [
+    vue(),
+    vueDevTools(),
+    VueI18nPlugin({
+      runtimeOnly: false,
+      include: resolve(
+        dirname(fileURLToPath(import.meta.url)),
+        "./src/plugins/i18n/locales/**",
+      ),
+    }),
+    manualChunksPlugin(),
+    svgLoader(),
+  ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
