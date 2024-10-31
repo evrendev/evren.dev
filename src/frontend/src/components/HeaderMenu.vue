@@ -15,9 +15,16 @@
         <li>
           <router-link :to="{ name: 'about' }">About</router-link>
         </li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li>
+          <router-link :to="{ name: 'portfolio' }" @click="toggleMenu"
+            >Portfolio</router-link
+          >
+        </li>
+        <li>
+          <router-link :to="{ name: 'contact' }" @click="toggleMenu"
+            >Contact</router-link
+          >
+        </li>
       </ul>
     </div>
   </div>
