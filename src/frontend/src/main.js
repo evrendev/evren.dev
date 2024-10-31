@@ -1,11 +1,11 @@
 import "@/assets/css/main.scss"
 
 import { createApp } from "vue"
-import { pinia } from "./plugins"
+import { pinia, i18n } from "./plugins"
 
 import App from "./App.vue"
 import router from "./router"
 
 const app = createApp(App)
 app.config.globalProperties.applicationName = "Onar.im"
-app.use(router).use(pinia).mount("#app")
+app.use(router).use(pinia).use(i18n).mount("#app")

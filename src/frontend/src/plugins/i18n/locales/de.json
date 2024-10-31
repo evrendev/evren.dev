@@ -1,0 +1,33 @@
+{
+  "appTitle": "Evren.Dev",
+  "logo": "@:appTitle logo",
+  "locale": {
+    "en": "English",
+    "de": "Deutsch"
+  },
+  "components": {
+    "nav": {
+      "home": {
+        "text": "Startseite",
+        "url": ""
+      },
+      "about": {
+        "text": "Über Uns",
+        "url": "uber-uns"
+      },
+      "contact": {
+        "text": "Kontakt",
+        "url": "kontakt"
+      },
+      "back": "Zurückgehen"
+    },
+    "cookie": {
+      "disclaimer": "Diese Website verwendet Cookies. Diese Cookies verarbeiten keine personenbezogenen Daten. Bitte lesen Sie unsere {action} für weitere Informationen.",
+      "link-text": "Cookie-Richtlinie",
+      "title": "Cookie-Richtlinie",
+      "url": "cookie-richtlinie",
+      "button-text": "Schliessen"
+    }
+  },
+  "page": {}
+}
