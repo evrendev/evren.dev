@@ -16,14 +16,10 @@
           <router-link :to="{ name: 'about' }">About</router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'portfolio' }" @click="toggleMenu"
-            >Portfolio</router-link
-          >
+          <router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'contact' }" @click="toggleMenu"
-            >Contact</router-link
-          >
+          <router-link :to="{ name: 'contact' }">Contact</router-link>
         </li>
       </ul>
     </div>
@@ -55,6 +51,7 @@
       letter-spacing: 5px;
     }
   }
+
   .menu {
     ul {
       display: flex;
