@@ -9,8 +9,12 @@
     </div>
     <div class="menu">
       <ul class="transition_link">
-        <li class="active"><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li>
+          <router-link :to="{ name: 'home' }">Home</router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'about' }">About</router-link>
+        </li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#news">News</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -55,15 +59,15 @@
         a {
           color: var(--bc);
           transition: all 0.3s ease;
+
+          &.active,
+          &:hover {
+            color: #000;
+          }
         }
 
         &:last-child {
           margin-right: 0px;
-        }
-
-        &.active a,
-        a:hover {
-          color: #000;
         }
       }
     }

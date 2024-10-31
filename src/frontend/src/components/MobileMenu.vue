@@ -1,12 +1,10 @@
 <script setup>
 import "hamburgers/dist/hamburgers.min.css"
-import { SvgIcon } from "."
-import { RouterLink } from "vue-router"
 import { ref } from "vue"
+import { RouterLink } from "vue-router"
+import { Copyright, SocialMediaAccounts } from "."
 
 let isOpened = ref(false)
-
-let currentYear = ref(new Date().getFullYear())
 
 const toggleMenu = () => {
   isOpened.value = !isOpened.value
@@ -18,7 +16,7 @@ const toggleMenu = () => {
     <div class="topbar_inner">
       <div class="logo transition_link" data-type="text">
         <router-link :to="{ name: 'home' }">
-          <h3 class="font-kanit w500">EVREN</h3>
+          <h3>EVREN</h3>
         </router-link>
       </div>
       <div class="trigger">
@@ -54,33 +52,8 @@ const toggleMenu = () => {
       </ul>
     </div>
     <div class="extra">
-      <div class="social">
-        <ul>
-          <li>
-            <a href="https://github.com/evrendev" target="_blank">
-              <svg-icon name="github" />
-            </a>
-          </li>
-          <li>
-            <a href="https://leetcode.com/u/evrendev/" target="_blank">
-              <svg-icon name="leetcode" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/evrenyeniev/" target="_blank">
-              <svg-icon name="linkedin" />
-            </a>
-          </li>
-          <li>
-            <a href="https://x.com/evrendev" target="_blank">
-              <svg-icon name="twitter" />
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="copyright">
-        <p>&copy; {{ currentYear }} Evren.dev<br />All rights are reserved</p>
-      </div>
+      <social-media-accounts style="margin-bottom: 5px" />
+      <copyright />
     </div>
   </div>
 </template>
@@ -186,32 +159,6 @@ const toggleMenu = () => {
     text-align: right;
     padding: 0px 20px;
     margin-top: 50px;
-
-    .social {
-      width: 100%;
-      margin-bottom: 5px;
-
-      ul {
-        display: flex;
-        justify-content: flex-end;
-
-        li {
-          margin-right: 10px;
-
-          a {
-            transition: all 0.3s ease;
-
-            svg {
-              fill: black;
-            }
-          }
-
-          &:last-child {
-            margin-right: 0px;
-          }
-        }
-      }
-    }
   }
 }
 </style>

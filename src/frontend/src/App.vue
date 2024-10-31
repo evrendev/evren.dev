@@ -5,6 +5,7 @@ import {
   HeaderMenu,
   Content,
   MobileMenu,
+  FooterMenu,
 } from "./components"
 </script>
 
@@ -19,6 +20,8 @@ import {
     <header-menu />
 
     <content />
+
+    <footer-menu />
   </div>
 </template>
 
