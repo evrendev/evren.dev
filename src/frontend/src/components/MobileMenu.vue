@@ -111,27 +111,10 @@ const toggleMenu = () => {
 
   .logo {
     h3 {
+      font-family: "Montserrat";
+      font-weight: 900;
       font-size: 25px;
-      letter-spacing: 4px;
-    }
-
-    &[data-type="image"] {
-      img {
-        display: inline-block;
-      }
-
-      h3 {
-        display: none;
-      }
-    }
-
-    &[data-type="text"] {
-      img {
-        display: none;
-      }
-      h3 {
-        display: inline-block;
-      }
+      letter-spacing: 5px;
     }
   }
 
