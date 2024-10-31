@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { useI18n } from "vue-i18n"
+const { t } = useI18n()
+</script>
 
 <template>
   <div class="page_header">
@@ -10,16 +13,24 @@
     <div class="menu">
       <ul class="transition_link">
         <li>
-          <router-link :to="{ name: 'home' }">Home</router-link>
+          <router-link :to="{ name: 'home' }">
+            {{ t("components.nav.home.text") }}
+          </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'about' }">About</router-link>
+          <router-link :to="{ name: 'about' }">
+            {{ t("components.nav.about.text") }}
+          </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
+          <router-link :to="{ name: 'portfolio' }">
+            {{ t("components.nav.portfolio.text") }}
+          </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'contact' }">Contact</router-link>
+          <router-link :to="{ name: 'contact' }">
+            {{ t("components.nav.contact.text") }}
+          </router-link>
         </li>
       </ul>
     </div>

@@ -12,11 +12,15 @@
         "url": ""
       },
       "about": {
-        "text": "About Us",
-        "url": "about-us"
+        "text": "About",
+        "url": "about"
+      },
+      "portfolio": {
+        "text": "Portfolio",
+        "url": "portfolio"
       },
       "contact": {
-        "text": "Contact Us",
+        "text": "Contact",
         "url": "contact"
       },
       "back": "Go Back"

@@ -15,6 +15,10 @@
         "text": "Über Uns",
         "url": "uber-uns"
       },
+      "portfolio": {
+        "text": "Portefeuille",
+        "url": "portefeuille"
+      },
       "contact": {
         "text": "Kontakt",
         "url": "kontakt"

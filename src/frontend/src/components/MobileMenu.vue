@@ -2,9 +2,11 @@
 import "hamburgers/dist/hamburgers.min.css"
 import { ref } from "vue"
 import { RouterLink } from "vue-router"
+import { useI18n } from "vue-i18n"
 import { Copyright, SocialMediaAccounts } from "."
 
-let isOpened = ref(false)
+const isOpened = ref(false)
+const { t } = useI18n()
 
 const toggleMenu = () => {
   isOpened.value = !isOpened.value
@@ -37,24 +39,24 @@ const toggleMenu = () => {
     <div class="menu_list">
       <ul class="transition_link">
         <li>
-          <router-link :to="{ name: 'home' }" @click="toggleMenu"
-            >Home</router-link
-          >
+          <router-link :to="{ name: 'home' }" @click="toggleMenu">
+            {{ t("components.nav.home.text") }}
+          </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'about' }" @click="toggleMenu"
-            >About</router-link
-          >
+          <router-link :to="{ name: 'about' }" @click="toggleMenu">
+            {{ t("components.nav.about.text") }}
+          </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'portfolio' }" @click="toggleMenu"
-            >Portfolio</router-link
-          >
+          <router-link :to="{ name: 'portfolio' }" @click="toggleMenu">
+            {{ t("components.nav.portfolio.text") }}
+          </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'contact' }" @click="toggleMenu"
-            >Contact</router-link
-          >
+          <router-link :to="{ name: 'contact' }" @click="toggleMenu">
+            {{ t("components.nav.contact.text") }}
+          </router-link>
         </li>
       </ul>
     </div>
