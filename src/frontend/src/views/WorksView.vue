@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="portfolio">
+  <div class="works">
     <span>Portfolio</span>
   </div>
 </template>

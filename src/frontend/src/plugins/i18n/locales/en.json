@@ -15,9 +15,9 @@
         "text": "About",
         "url": "about"
       },
-      "portfolio": {
-        "text": "Portfolio",
-        "url": "portfolio"
+      "works": {
+        "text": "Works",
+        "url": "works"
       },
       "contact": {
         "text": "Contact",
@@ -33,5 +33,14 @@
       "button-text": "Close"
     }
   },
-  "page": {}
+  "page": {
+    "home": {
+      "meta": {
+        "title": "",
+        "description": "",
+        "keywords": ""
+      },
+      "title": "Home"
+    }
+  }
 }

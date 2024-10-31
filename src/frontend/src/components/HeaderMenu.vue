@@ -23,8 +23,8 @@ const { t } = useI18n()
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'portfolio' }">
-            {{ t("components.nav.portfolio.text") }}
+          <router-link :to="{ name: 'works' }">
+            {{ t("components.nav.works.text") }}
           </router-link>
         </li>
         <li>

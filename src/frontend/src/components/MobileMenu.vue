@@ -49,8 +49,8 @@ const toggleMenu = () => {
           </router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'portfolio' }" @click="toggleMenu">
-            {{ t("components.nav.portfolio.text") }}
+          <router-link :to="{ name: 'works' }" @click="toggleMenu">
+            {{ t("components.nav.works.text") }}
           </router-link>
         </li>
         <li>
