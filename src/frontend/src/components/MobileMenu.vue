@@ -153,10 +153,11 @@ const toggleMenu = () => {
         margin: 0px 0px 7px 0px;
 
         a {
-          color: #000;
+          color: var(--bc);
+          transition: all 0.3s ease;
 
           &.exact-active {
-            font-weight: 700;
+            color: #000;
           }
         }
       }
