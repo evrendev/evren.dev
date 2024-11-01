@@ -5,6 +5,6 @@ let currentYear = ref(new Date().getFullYear())
 
 <template>
   <div class="copyright">
-    <p>&copy; {{ currentYear }} Evren.dev | All rights are reserved</p>
+    <p>&copy; {{ currentYear }} evren.dev</p>
   </div>
 </template>
