@@ -36,6 +36,11 @@
       "title": "Home"
     },
     "contact": {
+      "meta": {
+        "title": "",
+        "description": "",
+        "keywords": ""
+      },
       "title": "Contact Information",
       "form": {
         "name": {
