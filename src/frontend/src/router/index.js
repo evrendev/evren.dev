@@ -22,7 +22,7 @@ const router = createRouter({
           name: "home",
           alias: ["home", "start-seite"],
           component: () =>
-            import(/* webpackChunkName: "home" */ "@/views/HomeView.vue"),
+            import(/* webpackChunkName: "home" */ "@/views/home/HomeView.vue"),
           meta: {
             title: "page.home.meta.title",
             description: "page.home.meta.description",
@@ -37,21 +37,11 @@ const router = createRouter({
           name: "about",
           alias: ["uber-mich"],
           component: () =>
-            import(/* webpackChunkName: "about" */ "@/views/AboutView.vue"),
+            import(
+              /* webpackChunkName: "about" */ "@/views/about/AboutView.vue"
+            ),
           meta: {
             title: "page.about.title",
-            enterActiveClass: "animate__animated animate__fadeInLeftBig",
-            enterLeaveClass: "animate__animated animate__fadeOutRightBig",
-          },
-        },
-        {
-          path: "contact",
-          name: "contact",
-          alias: ["kontakt"],
-          component: () =>
-            import(/* webpackChunkName: "contact" */ "@/views/ContactView.vue"),
-          meta: {
-            title: "page.contact.title",
             enterActiveClass: "animate__animated animate__fadeInLeftBig",
             enterLeaveClass: "animate__animated animate__fadeOutRightBig",
           },
@@ -61,9 +51,25 @@ const router = createRouter({
           name: "works",
           alias: ["arbeiten"],
           component: () =>
-            import(/* webpackChunkName: "works" */ "@/views/WorksView.vue"),
+            import(
+              /* webpackChunkName: "works" */ "@/views/works/WorksView.vue"
+            ),
           meta: {
             title: "page.projects.title",
+            enterActiveClass: "animate__animated animate__fadeInLeftBig",
+            enterLeaveClass: "animate__animated animate__fadeOutRightBig",
+          },
+        },
+        {
+          path: "contact",
+          name: "contact",
+          alias: ["kontakt"],
+          component: () =>
+            import(
+              /* webpackChunkName: "contact" */ "@/views/contact/ContactView.vue"
+            ),
+          meta: {
+            title: "page.contact.title",
             enterActiveClass: "animate__animated animate__fadeInLeftBig",
             enterLeaveClass: "animate__animated animate__fadeOutRightBig",
           },
