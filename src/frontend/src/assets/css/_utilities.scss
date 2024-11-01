@@ -109,42 +109,6 @@
   right: 0px;
 }
 
-.page_button {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background-color: #000;
-    transform: translateY(100%);
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-
-  &:hover:before {
-    transform: translateY(0);
-  }
-
-  span {
-    color: #fff;
-    font-weight: 500;
-    font-size: 13px;
-    text-transform: uppercase;
-  }
-
-  a {
-    display: block;
-    padding: 15px 35px;
-    background-color: #666;
-  }
-}
-
 .page_borders {
   position: fixed;
   top: 0px;
