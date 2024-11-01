@@ -61,7 +61,7 @@ const { t } = useI18n()
 
     h3 {
       font-family: "Montserrat";
-      font-weight: 900;
+      font-weight: 700;
       font-size: 31px;
       letter-spacing: 5px;
     }

@@ -94,7 +94,7 @@ const toggleMenu = () => {
   .logo {
     h3 {
       font-family: "Montserrat";
-      font-weight: 900;
+      font-weight: 700;
       font-size: 25px;
       letter-spacing: 5px;
     }
