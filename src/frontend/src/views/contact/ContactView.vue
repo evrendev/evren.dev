@@ -96,142 +96,144 @@ const onInvalidSubmit = ({ errors }) => {
 </script>
 
 <template>
-  <div class="container">
-    <div class="page_contact">
-      <div class="page_title">
-        <h3>
-          <span>
-            {{ t("page.contact.get-in-touch") }}
-          </span>
-        </h3>
-      </div>
-      <div class="infolist">
-        <ul>
-          <li>
-            <div class="list_inner">
-              <span>
-                {{ t("page.contact.form.phone.text") }}
-              </span>
-              <span>
-                <a
-                  class="line_effect"
-                  href="`tel:${t('page.contact.phone.plain')}`"
-                >
-                  {{ t("page.contact.phone.formatted") }}
-                </a>
-              </span>
-            </div>
-          </li>
-          <li>
-            <div class="list_inner">
-              <span>
-                {{ t("page.contact.email.title") }}
-              </span>
-              <span>
-                <a
-                  href="#"
-                  rel="nofollow"
-                  class="line_effect"
-                  :onclick="`this.href='mailto:${t('page.contact.email.initial')}@${t(
-                    'page.contact.email.domain',
-                  )}'`"
-                  >{{ t("page.contact.email.text") }}</a
-                >
-              </span>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="form_wrapper">
-        <v-form
-          id="contact-form"
-          autocomplete="off"
-          @submit="onSubmit"
-          @invalid-submit="onInvalidSubmit"
-          :validation-schema="schema"
-          :initial-values="message"
-          v-slot="{ errors, isSubmitting }"
-        >
+  <div class="section contact">
+    <div class="container">
+      <div class="page_contact">
+        <div class="page_title">
+          <h3>
+            <span>
+              {{ t("page.contact.get-in-touch") }}
+            </span>
+          </h3>
+        </div>
+        <div class="infolist">
           <ul>
             <li>
-              <v-field
-                name="name"
-                v-model="message.name"
-                :placeholder="t('page.contact.form.name.placeholder')"
-                :class="{ 'is-invalid': errors.name }"
-              />
-              <error-message name="name" as="div" class="has-error" />
+              <div class="list_inner">
+                <span>
+                  {{ t("page.contact.form.phone.text") }}
+                </span>
+                <span>
+                  <a
+                    class="line_effect"
+                    href="`tel:${t('page.contact.phone.plain')}`"
+                  >
+                    {{ t("page.contact.phone.formatted") }}
+                  </a>
+                </span>
+              </div>
             </li>
             <li>
-              <v-field
-                name="email"
-                id="email"
-                v-model="message.email"
-                :placeholder="t('page.contact.form.email.placeholder')"
-                :class="{ 'is-invalid': errors.email }"
-              />
-              <error-message name="email" as="div" class="has-error" />
-            </li>
-            <li>
-              <v-field
-                name="phone"
-                id="phone"
-                v-model="message.phone"
-                :placeholder="t('page.contact.form.phone.placeholder')"
-                :class="{ 'is-invalid': errors.phone }"
-              />
-              <error-message name="phone" as="div" class="has-error" />
-            </li>
-            <li>
-              <v-field
-                name="subject"
-                id="subject"
-                v-model="message.subject"
-                :placeholder="t('page.contact.form.subject.placeholder')"
-                :class="{ 'is-invalid': errors.subject }"
-              />
-              <error-message name="subject" as="div" class="has-error" />
-            </li>
-            <li>
-              <v-field
-                as="textarea"
-                name="message"
-                id="message"
-                v-model="message.message"
-                :placeholder="t('page.contact.form.message.placeholder')"
-                :class="{ 'is-invalid': errors.message }"
-              />
-              <error-message name="message" as="div" class="has-error" />
+              <div class="list_inner">
+                <span>
+                  {{ t("page.contact.email.title") }}
+                </span>
+                <span>
+                  <a
+                    href="#"
+                    rel="nofollow"
+                    class="line_effect"
+                    :onclick="`this.href='mailto:${t('page.contact.email.initial')}@${t(
+                      'page.contact.email.domain',
+                    )}'`"
+                    >{{ t("page.contact.email.text") }}</a
+                  >
+                </span>
+              </div>
             </li>
           </ul>
-          <div class="page_captcha">
-            <vue-recaptcha
-              ref="googleRecaptcha"
-              :language="locale"
-              :sitekey="siteKey"
-              :load-recaptcha-script="true"
-              @render="handleCaptchaRender"
-              @verify="handleCaptchaSuccess"
-              @error="handleCaptchaError"
-            ></vue-recaptcha>
-          </div>
-          <div class="page_button">
-            <button
-              type="submit"
-              id="send_message"
-              class="text_effect"
-              href="#"
-              :disabled="isSubmitting"
-            >
-              <span class="wrapper"
-                ><span class="before">{{ t("page.contact.form.send") }}</span
-                ><span class="after">{{
-                  t("page.contact.form.send")
-                }}</span></span
+        </div>
+        <div class="form_wrapper">
+          <v-form
+            id="contact-form"
+            autocomplete="off"
+            @submit="onSubmit"
+            @invalid-submit="onInvalidSubmit"
+            :validation-schema="schema"
+            :initial-values="message"
+            v-slot="{ errors, isSubmitting }"
+          >
+            <ul>
+              <li>
+                <v-field
+                  name="name"
+                  v-model="message.name"
+                  :placeholder="t('page.contact.form.name.placeholder')"
+                  :class="{ 'is-invalid': errors.name }"
+                />
+                <error-message name="name" as="div" class="has-error" />
+              </li>
+              <li>
+                <v-field
+                  name="email"
+                  id="email"
+                  v-model="message.email"
+                  :placeholder="t('page.contact.form.email.placeholder')"
+                  :class="{ 'is-invalid': errors.email }"
+                />
+                <error-message name="email" as="div" class="has-error" />
+              </li>
+              <li>
+                <v-field
+                  name="phone"
+                  id="phone"
+                  v-model="message.phone"
+                  :placeholder="t('page.contact.form.phone.placeholder')"
+                  :class="{ 'is-invalid': errors.phone }"
+                />
+                <error-message name="phone" as="div" class="has-error" />
+              </li>
+              <li>
+                <v-field
+                  name="subject"
+                  id="subject"
+                  v-model="message.subject"
+                  :placeholder="t('page.contact.form.subject.placeholder')"
+                  :class="{ 'is-invalid': errors.subject }"
+                />
+                <error-message name="subject" as="div" class="has-error" />
+              </li>
+              <li>
+                <v-field
+                  as="textarea"
+                  name="message"
+                  id="message"
+                  v-model="message.message"
+                  :placeholder="t('page.contact.form.message.placeholder')"
+                  :class="{ 'is-invalid': errors.message }"
+                />
+                <error-message name="message" as="div" class="has-error" />
+              </li>
+            </ul>
+            <div class="page_captcha">
+              <vue-recaptcha
+                ref="googleRecaptcha"
+                :language="locale"
+                :sitekey="siteKey"
+                :load-recaptcha-script="true"
+                @render="handleCaptchaRender"
+                @verify="handleCaptchaSuccess"
+                @error="handleCaptchaError"
+              ></vue-recaptcha>
+            </div>
+            <div class="page_button">
+              <button
+                type="submit"
+                id="send_message"
+                class="text_effect"
+                href="#"
+                :disabled="isSubmitting"
               >
-            </button>
-          </div>
-        </v-form>
+                <span class="wrapper"
+                  ><span class="before">{{ t("page.contact.form.send") }}</span
+                  ><span class="after">{{
+                    t("page.contact.form.send")
+                  }}</span></span
+                >
+              </button>
+            </div>
+          </v-form>
+        </div>
       </div>
     </div>
   </div>
