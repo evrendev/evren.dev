@@ -3,7 +3,7 @@ import "hamburgers/dist/hamburgers.min.css"
 import { ref } from "vue"
 import { RouterLink } from "vue-router"
 import { useI18n } from "vue-i18n"
-import { Copyright, SocialMediaAccounts } from "."
+import { EMail, SocialMediaAccounts } from "."
 
 const isOpened = ref(false)
 const { t } = useI18n()
@@ -62,7 +62,7 @@ const toggleMenu = () => {
     </div>
     <div class="extra">
       <social-media-accounts style="margin-bottom: 5px" />
-      <copyright />
+      <EMail />
     </div>
   </div>
 </template>

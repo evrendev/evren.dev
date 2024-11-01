@@ -1,10 +1,10 @@
 <script setup>
-import { Copyright, SocialMediaAccounts } from "."
+import { EMail, SocialMediaAccounts } from "."
 </script>
 
 <template>
   <div class="page_footer">
-    <copyright />
+    <EMail />
     <social-media-accounts />
   </div>
 </template>

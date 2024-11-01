@@ -1,6 +1,6 @@
 export { default as SvgIcon } from "./SvgIcon.vue"
 export { default as Preloader } from "./PreloaderComponent.vue"
-export { default as Copyright } from "./CopyrightComponent.vue"
+export { default as EMail } from "./MailToComponent.vue"
 export { default as SocialMediaAccounts } from "./SocialMediaLinksComponent.vue"
 export { default as MobileMenu } from "./MobileMenu.vue"
 export { default as HeaderMenu } from "./HeaderMenu.vue"
