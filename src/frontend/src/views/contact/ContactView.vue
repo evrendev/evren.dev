@@ -405,17 +405,18 @@ const onInvalidSubmit = ({ errors }) => {
             transform: translateY(0);
           }
 
-          span {
-            color: #fff;
-            font-weight: 500;
-            font-size: 13px;
-            text-transform: uppercase;
-          }
-
           button {
             display: block;
             padding: 15px 35px;
             background-color: #666;
+            cursor: pointer;
+
+            span {
+              color: #fff;
+              font-weight: 500;
+              font-size: 13px;
+              text-transform: uppercase;
+            }
           }
         }
       }
