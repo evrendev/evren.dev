@@ -83,7 +83,7 @@ const { t } = useI18n()
           color: var(--bc);
           transition: all 0.3s ease;
 
-          &.active,
+          &.exact-active,
           &:hover {
             color: #000;
           }
