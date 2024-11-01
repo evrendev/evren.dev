@@ -24,5 +24,3 @@ import {
     <footer-menu />
   </div>
 </template>
-
-<style scoped></style>
