@@ -97,7 +97,6 @@ const router = createRouter({
 })
 
 router.afterEach(to => {
-  console.log(to)
   const title = i18n.global.t(to.meta.title)
   const description = i18n.global.t(to.meta.description)
   const keywords = i18n.global.t(to.meta.keywords)
