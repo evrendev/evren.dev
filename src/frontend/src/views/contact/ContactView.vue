@@ -116,7 +116,7 @@ const onInvalidSubmit = ({ errors }) => {
                 <span>
                   <a
                     class="line_effect"
-                    href="`tel:${t('page.contact.phone.plain')}`"
+                    :href="`tel:${t('page.contact.phone.plain')}`"
                   >
                     {{ t("page.contact.phone.formatted") }}
                   </a>
