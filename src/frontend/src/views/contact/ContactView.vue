@@ -111,21 +111,6 @@ const onInvalidSubmit = ({ errors }) => {
             <li>
               <div class="list_inner">
                 <span>
-                  {{ t("page.contact.form.phone.text") }}
-                </span>
-                <span>
-                  <a
-                    class="line_effect"
-                    :href="`tel:${t('page.contact.phone.plain')}`"
-                  >
-                    {{ t("page.contact.phone.formatted") }}
-                  </a>
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="list_inner">
-                <span>
                   {{ t("page.contact.email.title") }}
                 </span>
                 <span>
@@ -138,6 +123,21 @@ const onInvalidSubmit = ({ errors }) => {
                     )}'`"
                     >{{ t("page.contact.email.text") }}</a
                   >
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="list_inner">
+                <span>
+                  {{ t("page.contact.form.phone.text") }}
+                </span>
+                <span>
+                  <a
+                    class="line_effect"
+                    :href="`tel:${t('page.contact.phone.plain')}`"
+                  >
+                    {{ t("page.contact.phone.formatted") }}
+                  </a>
                 </span>
               </div>
             </li>
