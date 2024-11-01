@@ -42,6 +42,9 @@ const router = createRouter({
             ),
           meta: {
             title: "page.about.title",
+            description: "page.about.meta.description",
+            keywords: "page.about.meta.keywords",
+            image: "page.about.meta.image",
             enterActiveClass: "animate__animated animate__fadeInLeftBig",
             enterLeaveClass: "animate__animated animate__fadeOutRightBig",
           },
@@ -55,7 +58,10 @@ const router = createRouter({
               /* webpackChunkName: "works" */ "@/views/works/WorksView.vue"
             ),
           meta: {
-            title: "page.projects.title",
+            title: "page.works.title",
+            description: "page.works.meta.description",
+            keywords: "page.works.meta.keywords",
+            image: "page.works.meta.image",
             enterActiveClass: "animate__animated animate__fadeInLeftBig",
             enterLeaveClass: "animate__animated animate__fadeOutRightBig",
           },
@@ -70,6 +76,9 @@ const router = createRouter({
             ),
           meta: {
             title: "page.contact.title",
+            description: "page.contact.meta.description",
+            keywords: "page.contact.meta.keywords",
+            image: "page.contact.meta.image",
             enterActiveClass: "animate__animated animate__fadeInLeftBig",
             enterLeaveClass: "animate__animated animate__fadeOutRightBig",
           },
@@ -87,21 +96,8 @@ const router = createRouter({
   },
 })
 
-router.beforeEach(async to => {
-  console.log("to", to)
-  // const newLocale = !Tr.supportedLocales.includes(to.params.locale)
-  //   ? Tr.defaultLocale
-  //   : to.params.locale
-  // const allLanguages = document.querySelectorAll("#locale-navigation > li");
-  // allLanguages.forEach((el) => (el.style.display = null));
-  // const currentLanguage = document.querySelector(`[data-code='${newLocale}']`);
-  // currentLanguage.style.display = "none";
-})
-
 router.afterEach(to => {
-  // const appStore = useAppStore();
-  // appStore.closeAllMenu();
-
+  console.log(to)
   const title = i18n.global.t(to.meta.title)
   const description = i18n.global.t(to.meta.description)
   const keywords = i18n.global.t(to.meta.keywords)
@@ -116,7 +112,7 @@ router.afterEach(to => {
   const ogUrlTag = document.querySelector("meta[property='og:url']")
   ogUrlTag.setAttribute("content", url)
 
-  // Twiiter Meta Tags
+  // Twitter Meta Tags
   const metaTitleTag = document.querySelector("meta[name='title']")
   metaTitleTag.setAttribute("content", title)
   const twitterTitleTag = document.querySelector("meta[name='twitter:title']")
