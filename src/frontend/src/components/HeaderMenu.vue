@@ -50,6 +50,10 @@ const { t } = useI18n()
   z-index: 11;
   padding: 0px 60px;
 
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
   .logo {
     img {
       max-width: 130px;
@@ -70,6 +74,10 @@ const { t } = useI18n()
 
       li {
         margin-right: 40px;
+
+        @media (max-width: 1600px) {
+          margin-right: 30px;
+        }
 
         a {
           color: var(--bc);
