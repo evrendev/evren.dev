@@ -24,13 +24,6 @@
         "url": "contact"
       },
       "back": "Go Back"
-    },
-    "cookie": {
-      "disclaimer": "This site uses cookies. These cookies do not process personal data. Please read our {action} for more information.",
-      "link-text": "Cookie Policy",
-      "title": "Cookie Policy",
-      "url": "cookie-policy",
-      "button-text": "Close"
     }
   },
   "page": {
@@ -41,6 +34,49 @@
         "keywords": ""
       },
       "title": "Home"
+    },
+    "contact": {
+      "title": "Contact Information",
+      "form": {
+        "name": {
+          "text": "Name",
+          "placeholder": "Enter your name",
+          "required": "You need to enter your first and last name"
+        },
+        "email": {
+          "text": "Email",
+          "placeholder": "Enter your email",
+          "required": "You need to enter your email addresss",
+          "invalid": "Your email address doesn't seem valid"
+        },
+        "phone": {
+          "text": "Phone",
+          "placeholder": "(0555) 111 2233"
+        },
+        "subject": {
+          "text": "Subject",
+          "placeholder": "Enter subject",
+          "required": "You need to enter your subject"
+        },
+        "message": {
+          "text": "Message",
+          "placeholder": "Write your question here",
+          "required": "You need to enter your message"
+        },
+        "send": "Send Message"
+      },
+      "get-in-touch": "Get In Touch",
+      "follow-me": "Follow Me",
+      "email": {
+        "title": "Email",
+        "text": "mail[at]evren.dev",
+        "initial": "mail",
+        "domain": "evren.dev"
+      },
+      "phone": {
+        "formatted": "+49 (1765) 823 3031",
+        "plain": "+4917658233031"
+      }
     }
   }
 }
