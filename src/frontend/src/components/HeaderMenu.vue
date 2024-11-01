@@ -6,9 +6,9 @@ const { t } = useI18n()
 <template>
   <div class="page_header">
     <div class="logo transition_link" data-type="text">
-      <a href="#home">
+      <router-link :to="{ name: 'home' }">
         <h3>EVREN</h3>
-      </a>
+      </router-link>
     </div>
     <div class="menu">
       <ul class="transition_link">
