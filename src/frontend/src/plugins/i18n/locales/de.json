@@ -2,7 +2,7 @@
   "appTitle": "Evren.Dev",
   "logo": "@:appTitle logo",
   "locale": {
-    "en": "English",
+    "en": "Englisch",
     "de": "Deutsch"
   },
   "components": {
@@ -12,18 +12,18 @@
         "url": ""
       },
       "about": {
-        "text": "Über Uns",
-        "url": "uber-uns"
+        "text": "Über mich",
+        "url": "about"
       },
       "works": {
-        "text": "Portefeuille",
-        "url": "portefeuille"
+        "text": "Arbeiten",
+        "url": "works"
       },
       "contact": {
         "text": "Kontakt",
-        "url": "kontakt"
+        "url": "contact"
       },
-      "back": "Zurückgehen"
+      "back": "Zurück"
     }
   },
   "page": {
@@ -41,7 +41,7 @@
         "description": "",
         "keywords": ""
       },
-      "title": "Kontaktinformationen",
+      "title": "Kontakt",
       "form": {
         "name": {
           "text": "Name",
@@ -49,37 +49,37 @@
           "required": "Sie müssen Ihren Vor- und Nachnamen eingeben"
         },
         "email": {
-          "text": "E-mail",
-          "placeholder": "Ihre E-Mail eingeben",
-          "required": "Sie müssen Ihre E-Mail-Adressen eingeben",
-          "invalid": "Ihre E-Mail Adresse scheint nicht valid"
+          "text": "E-Mail",
+          "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
+          "required": "Sie müssen Ihre E-Mail-Adresse eingeben",
+          "invalid": "Ihre E-Mail-Adresse scheint nicht gültig zu sein"
         },
         "phone": {
           "text": "Telefon",
           "placeholder": "(0555) 111 2233"
         },
         "subject": {
-          "text": "Thema",
-          "placeholder": "Thema eingeben",
-          "required": "Sie müssen Ihr Thema eingeben"
+          "text": "Betreff",
+          "placeholder": "Betreff eingeben",
+          "required": "Sie müssen einen Betreff eingeben"
         },
         "message": {
           "text": "Nachricht",
           "placeholder": "Schreiben Sie Ihre Frage hier",
-          "required": "Sie müssen Ihre Nachricht eingeben"
+          "required": "Sie müssen eine Nachricht eingeben"
         },
         "send": "Nachricht senden"
       },
       "get-in-touch": "Kontakt aufnehmen",
-      "follow-me": "Folgen Sie uns",
+      "follow-me": "Folgen Sie mir",
       "email": {
-        "title": "E-mail",
+        "title": "E-Mail",
         "text": "mail[at]evren.dev",
         "initial": "mail",
         "domain": "evren.dev"
       },
       "phone": {
-        "formatted": "+49 (1765) 823 3031",
+        "formatted": "+49 (176) 5823 3031",
         "plain": "+4917658233031"
       }
     }
