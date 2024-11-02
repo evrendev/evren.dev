@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router"
 import { i18n } from "@/plugins"
 import Tr from "@/plugins/i18n/translation"
+import HomeView from "@/views/home/HomeView.vue"
 
-const DEFAULT_TITLE = "Evren.Dev"
+const DEFAULT_TITLE = "evren.dev"
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,8 +22,7 @@ const router = createRouter({
           path: "",
           name: "home",
           alias: ["home", "start-seite"],
-          component: () =>
-            import(/* webpackChunkName: "home" */ "@/views/home/HomeView.vue"),
+          component: HomeView,
           meta: {
             title: "page.home.meta.title",
             description: "page.home.meta.description",
@@ -97,12 +97,13 @@ const router = createRouter({
 })
 
 router.afterEach(to => {
-  const title = i18n.global.t(to.meta.title)
-  const description = i18n.global.t(to.meta.description)
-  const keywords = i18n.global.t(to.meta.keywords)
+  const pageTitle = i18n.global.t(to.title)
+  const metaTitle = i18n.global.t(to.meta.title)
+  const metaDescription = i18n.global.t(to.meta.description)
+  const metaKeywords = i18n.global.t(to.meta.keywords)
 
   // Page Title
-  document.title = `${title} | ${DEFAULT_TITLE}`
+  document.title = `${pageTitle} | ${DEFAULT_TITLE}`
 
   // Canonical Url
   const url = `${import.meta.env.VITE_SITE_URL}${to.fullPath}`
@@ -113,25 +114,25 @@ router.afterEach(to => {
 
   // Twitter Meta Tags
   const metaTitleTag = document.querySelector("meta[name='title']")
-  metaTitleTag.setAttribute("content", title)
+  metaTitleTag.setAttribute("content", metaTitle)
   const twitterTitleTag = document.querySelector("meta[name='twitter:title']")
-  twitterTitleTag.setAttribute("content", title)
+  twitterTitleTag.setAttribute("content", metaTitle)
   const ogTitleTag = document.querySelector("meta[property='og:title']")
-  ogTitleTag.setAttribute("content", title)
+  ogTitleTag.setAttribute("content", metaTitle)
 
   const metaDescriptionTag = document.querySelector("meta[name='description']")
-  metaDescriptionTag.setAttribute("content", description)
+  metaDescriptionTag.setAttribute("content", metaDescription)
   const twitterDescriptionTag = document.querySelector(
     "meta[name='twitter:description']",
   )
-  twitterDescriptionTag.setAttribute("content", description)
+  twitterDescriptionTag.setAttribute("content", metaDescription)
   const ogDescriptionTag = document.querySelector(
     "meta[property='og:description']",
   )
-  ogDescriptionTag.setAttribute("content", description)
+  ogDescriptionTag.setAttribute("content", metaDescription)
 
   const metaKeywordsTag = document.querySelector("meta[name='keywords']")
-  metaKeywordsTag.setAttribute("content", keywords)
+  metaKeywordsTag.setAttribute("content", metaKeywords)
 })
 
 export default router
