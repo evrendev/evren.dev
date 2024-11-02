@@ -1,13 +1,24 @@
 <script setup>
+import { onMounted } from "vue"
 import { useAppStore } from "@/stores"
 import { storeToRefs } from "pinia"
 
 const appStore = useAppStore()
 const { showPreloader } = storeToRefs(appStore)
+
+onMounted(() => {
+  setTimeout(() => {
+    showPreloader.value = false
+  }, 2000)
+})
 </script>
 
 <template>
-  <div id="preloader" :class="{ preloaded: !showPreloader }">
+  <div
+    id="preloader"
+    :class="{ preloaded: !showPreloader }"
+    class="animate__animated animate__fadeOut animate_fadeIn"
+  >
     <div class="loader_line"></div>
   </div>
 </template>
