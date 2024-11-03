@@ -23,7 +23,7 @@ public class ReCaptcha
     {
         try
         {
-            string? secretKey = _configuration.GetSection("Recaptcha.SecretKey").Get<string>();
+            string? secretKey = _configuration.GetSection("Google:Recaptcha.SecretKey").Get<string>();
             HttpResponseMessage postTask = await _captchaClient
                 .PostAsync($"?secret={secretKey}&response={token}", new StringContent(""));
             string result = await postTask.Content.ReadAsStringAsync();
