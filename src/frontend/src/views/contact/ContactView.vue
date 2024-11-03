@@ -19,7 +19,7 @@ const siteKey = computed(() => {
 
 const handleCaptchaVerify = response => {
   recapchaVerified.value = true
-  message.recaptchaToken = response
+  message.response = response
 }
 
 const handleCaptchaExpired = () => {
@@ -52,12 +52,12 @@ const schema = object().shape({
 })
 
 const initialFormValue = () => ({
-  name: "",
-  email: "",
-  phone: "",
-  subject: "",
-  message: "",
-  recaptchaToken: "",
+  name: "Evren Yeniev",
+  email: "evrenyeniev@gmail.com",
+  phone: "+905549162988",
+  subject: "Yeni Mesaj",
+  message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  response: "",
 })
 
 const message = reactive(initialFormValue())
