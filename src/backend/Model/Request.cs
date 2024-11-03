@@ -7,5 +7,5 @@ public class Request
     public string? Phone { get; set; }
     public string? Subject { get; set; }
     public string? Message { get; set; }
-    public string? RecaptchaToken { get; set; }
+    public string? Response { get; set; }
 }

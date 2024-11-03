@@ -1,5 +1,6 @@
 using System.Text;
 
+using EvrenDev.Extensions;
 using EvrenDev.Model;
 
 using Microsoft.AspNetCore.Mvc;
@@ -10,7 +11,10 @@ var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 configuration.AddJsonFile("secret.json", optional: true, reloadOnChange: true);
 
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient<ReCaptcha>(client =>
+{
+    client.BaseAddress = new Uri("https://www.google.com/recaptcha/api/siteverify");
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(config =>
 {
@@ -19,7 +23,20 @@ builder.Services.AddOpenApiDocument(config =>
     config.Version = "v1";
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigins",
+        policy =>
+        {
+            policy.WithOrigins("https://evren.dev", "http://localhost:3000")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowSpecificOrigins");
 
 if (app.Environment.IsDevelopment())
 {
@@ -38,10 +55,13 @@ var ahaSendApiUrl = configuration.GetValue<string>("Ahasend:ApiUrl");
 var from = configuration.GetSection("Ahasend:From").Get<From>();
 var recipients = configuration.GetSection("Ahasend:Recipients").Get<List<Recipient>>();
 
-app.MapPost("/send-mail", async (HttpClient httpClient, [FromBody] Request emailRequest) =>
+app.MapPost("/sendmail", async (HttpClient httpClient, ReCaptcha recaptcha, [FromBody] Request emailRequest) =>
 {
-    var apiKey = ahaSendApiKey;
+    bool checkCaptcha = await recaptcha.IsValid(emailRequest.Response ?? string.Empty);
+    if (!checkCaptcha)
+        return Results.BadRequest("Invalid reCaptcha token.");
 
+    var apiKey = ahaSendApiKey;
     var emailContent = new Content
     {
         Subject = emailRequest.Subject,
@@ -68,14 +88,10 @@ app.MapPost("/send-mail", async (HttpClient httpClient, [FromBody] Request email
     var response = await httpClient.PostAsync(ahaSendApiUrl, content);
 
     if (response.IsSuccessStatusCode)
-    {
         return Results.Ok("Email sent successfully.");
-    }
-    else
-    {
-        var errorContent = await response.Content.ReadAsStringAsync();
-        return Results.Problem(errorContent, statusCode: (int)response.StatusCode);
-    }
+
+    var errorContent = await response.Content.ReadAsStringAsync();
+    return Results.Problem(errorContent, statusCode: (int)response.StatusCode);
 });
 
 app.Run();
