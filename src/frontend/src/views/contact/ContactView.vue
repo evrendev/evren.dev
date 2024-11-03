@@ -13,22 +13,31 @@ const { t, locale } = useI18n()
 const mailStore = useMailStore()
 
 const siteKey = computed(() => {
-  return import.meta.env.VITE_GOOGLE_SITE_KEY
+  return import.meta.env.VITE_RECAPTCHA_SITE_KEY_V2
 })
 
-const handleCaptchaError = error => {
-  toaster.error(error ?? "Captcha Error!")
-}
-
-const handleCaptchaSuccess = response => {
+const handleCaptchaVerify = response => {
+  recapchaVerified.value = true
   message.response = response
 }
 
+const handleCaptchaExpired = () => {
+  recapchaVerified.value = false
+  toaster.error(t("page.contact.form.captcha.expired"))
+}
+
 const handleCaptchaRender = () => {
+  recapchaVerified.value = false
   googleRecaptcha.value.reset()
 }
 
+const handleCaptchaError = error => {
+  recapchaVerified.value = false
+  toaster.error(error ?? "Captcha Error!")
+}
+
 const googleRecaptcha = ref()
+const recapchaVerified = ref(false)
 
 const { response } = storeToRefs(mailStore)
 
@@ -63,6 +72,11 @@ const toaster = createToaster({
 })
 
 async function onSubmit(values, { resetForm }) {
+  if (!recapchaVerified.value) {
+    toaster.error(t("page.contact.form.captcha.required"))
+    return
+  }
+
   try {
     window.scrollTo({ top: 0, behavior: "smooth" })
     await mailStore.send(message)
@@ -212,8 +226,9 @@ const onInvalidSubmit = ({ errors }) => {
                 :sitekey="siteKey"
                 :load-recaptcha-script="true"
                 @render="handleCaptchaRender"
-                @verify="handleCaptchaSuccess"
+                @verify="handleCaptchaVerify"
                 @error="handleCaptchaError"
+                @expired="handleCaptchaExpired"
               ></vue-recaptcha>
             </div>
             <div class="page_button">

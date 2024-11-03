@@ -68,6 +68,10 @@
           "placeholder": "Write your question here",
           "required": "You need to enter your message"
         },
+        "captcha": {
+          "expired": "Verification expired. Check the checkbox again",
+          "required": "You need to verify that you are not a robot"
+        },
         "send": "Send Message"
       },
       "get-in-touch": "Get In Touch",
