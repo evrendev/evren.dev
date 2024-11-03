@@ -97,13 +97,12 @@ const router = createRouter({
 })
 
 router.afterEach(to => {
-  const pageTitle = i18n.global.t(to.title)
-  const metaTitle = i18n.global.t(to.meta.title)
-  const metaDescription = i18n.global.t(to.meta.description)
-  const metaKeywords = i18n.global.t(to.meta.keywords)
+  const title = i18n.global.t(to.meta.title)
+  const description = i18n.global.t(to.meta.description)
+  const keywords = i18n.global.t(to.meta.keywords)
 
   // Page Title
-  document.title = `${pageTitle} | ${DEFAULT_TITLE}`
+  document.title = `${title} | ${DEFAULT_TITLE}`
 
   // Canonical Url
   const url = `${import.meta.env.VITE_SITE_URL}${to.fullPath}`
@@ -114,25 +113,25 @@ router.afterEach(to => {
 
   // Twitter Meta Tags
   const metaTitleTag = document.querySelector("meta[name='title']")
-  metaTitleTag.setAttribute("content", metaTitle)
+  metaTitleTag.setAttribute("content", title)
   const twitterTitleTag = document.querySelector("meta[name='twitter:title']")
-  twitterTitleTag.setAttribute("content", metaTitle)
+  twitterTitleTag.setAttribute("content", title)
   const ogTitleTag = document.querySelector("meta[property='og:title']")
-  ogTitleTag.setAttribute("content", metaTitle)
+  ogTitleTag.setAttribute("content", title)
 
   const metaDescriptionTag = document.querySelector("meta[name='description']")
-  metaDescriptionTag.setAttribute("content", metaDescription)
+  metaDescriptionTag.setAttribute("content", description)
   const twitterDescriptionTag = document.querySelector(
     "meta[name='twitter:description']",
   )
-  twitterDescriptionTag.setAttribute("content", metaDescription)
+  twitterDescriptionTag.setAttribute("content", description)
   const ogDescriptionTag = document.querySelector(
     "meta[property='og:description']",
   )
-  ogDescriptionTag.setAttribute("content", metaDescription)
+  ogDescriptionTag.setAttribute("content", description)
 
   const metaKeywordsTag = document.querySelector("meta[name='keywords']")
-  metaKeywordsTag.setAttribute("content", metaKeywords)
+  metaKeywordsTag.setAttribute("content", keywords)
 })
 
 export default router
