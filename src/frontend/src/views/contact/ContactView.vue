@@ -19,7 +19,7 @@ const siteKey = computed(() => {
 
 const handleCaptchaVerify = response => {
   recapchaVerified.value = true
-  message.response = response
+  message.recaptchaToken = response
 }
 
 const handleCaptchaExpired = () => {
@@ -57,7 +57,7 @@ const initialFormValue = () => ({
   phone: "",
   subject: "",
   message: "",
-  response: "",
+  recaptchaToken: "",
 })
 
 const message = reactive(initialFormValue())
