@@ -6,11 +6,12 @@ import { Form as VForm, Field as VField, ErrorMessage } from "vee-validate"
 import { object, string } from "yup"
 import { VueRecaptcha } from "vue-recaptcha"
 import { useI18n } from "vue-i18n"
-import { useMailStore } from "@/stores"
+import { useMailStore, useAppStore } from "@/stores"
 
 const { t, locale } = useI18n()
 
 const mailStore = useMailStore()
+const appStore = useAppStore()
 
 const siteKey = computed(() => {
   return import.meta.env.VITE_RECAPTCHA_SITE_KEY_V2
@@ -77,16 +78,19 @@ async function onSubmit(values, { resetForm }) {
     return
   }
 
+  appStore.togglePreloader()
+
   try {
     window.scrollTo({ top: 0, behavior: "smooth" })
     await mailStore.send(message)
-
+    appStore.togglePreloader()
     if (!response.value.error) {
       toaster.success(response.value.message)
       resetForm()
       resetFormValues()
     }
   } catch (error) {
+    appStore.togglePreloader()
     toaster.error(error)
   }
 }
