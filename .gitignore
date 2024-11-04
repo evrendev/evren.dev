@@ -264,6 +264,7 @@ wwwroot/
 .DS_Store
 package-lock.json
 Secret.json
+.secrets
 
 # VS Code files for those working on multiple tools
 .vscode/
