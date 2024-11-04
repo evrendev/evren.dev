@@ -1,11 +1,12 @@
 using System.Text;
+using System.Text.Json;
 
 using EvrenDev.Extensions;
 using EvrenDev.Model;
 
 using Microsoft.AspNetCore.Mvc;
 
-using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -80,16 +81,27 @@ app.MapPost("/sendmail", async (HttpClient httpClient, ReCaptcha recaptcha, [Fro
         Content = emailContent
     };
 
-    var jsonContent = JsonConvert.SerializeObject(ahasendRequest);
+    var sendinSerializeOptions = new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,
+        WriteIndented = true
+    };
+    var jsonContent = JsonSerializer.Serialize(ahasendRequest, sendinSerializeOptions);
     var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
     httpClient.DefaultRequestHeaders.Add("x-api-key", apiKey);
 
     var response = await httpClient.PostAsync(ahaSendApiUrl, content);
     var responseContent = await response.Content.ReadAsStringAsync();
+
+    var responseSerializeOptions = new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = true
+    };
     var jsonResponse = new JsonResponse()
     {
-        Data = responseContent
+        Data = JsonSerializer.Deserialize<AhaSendResponse>(responseContent, responseSerializeOptions)
     };
 
     if (response.IsSuccessStatusCode)
