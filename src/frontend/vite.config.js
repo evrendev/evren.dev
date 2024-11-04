@@ -79,5 +79,5 @@ export default defineConfig({
     sourcemap: false,
     target: "esnext",
   },
-  base: "/evren.dev",
+  base: "/",
 })
