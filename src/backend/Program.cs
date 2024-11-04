@@ -59,8 +59,15 @@ var recipients = configuration.GetSection("Ahasend:Recipients").Get<List<Recipie
 app.MapPost("/sendmail", async (HttpClient httpClient, ReCaptcha recaptcha, [FromBody] FormRequest formRequest) =>
 {
     bool checkCaptcha = await recaptcha.IsValid(formRequest.Response ?? string.Empty);
+
+    var jsonResponse = new JsonResponse()
+    {
+        Success = false,
+        Message = "Invalid reCaptcha token."
+    };
+
     if (!checkCaptcha)
-        return Results.BadRequest("Invalid reCaptcha token.");
+        return Results.BadRequest(jsonResponse);
 
     var apiKey = ahaSendApiKey;
     var emailContent = new Content
@@ -99,15 +106,12 @@ app.MapPost("/sendmail", async (HttpClient httpClient, ReCaptcha recaptcha, [Fro
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         WriteIndented = true
     };
-    var jsonResponse = new JsonResponse()
-    {
-        Data = JsonSerializer.Deserialize<AhaSendResponse>(responseContent, responseSerializeOptions)
-    };
 
     if (response.IsSuccessStatusCode)
     {
         jsonResponse.Success = true;
         jsonResponse.Message = "Email sent successfully.";
+        jsonResponse.Data = JsonSerializer.Deserialize<AhaSendResponse>(responseContent, responseSerializeOptions);
 
         return Results.Ok(jsonResponse);
     }
