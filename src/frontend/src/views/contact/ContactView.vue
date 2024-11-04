@@ -52,11 +52,11 @@ const schema = object().shape({
 })
 
 const initialFormValue = () => ({
-  name: "Evren Yeniev",
-  email: "evrenyeniev@gmail.com",
-  phone: "+905549162988",
-  subject: "Yeni Mesaj",
-  message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  name: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
   response: "",
 })
 
