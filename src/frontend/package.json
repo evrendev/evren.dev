@@ -1,8 +1,10 @@
 {
   "name": "evren.dev",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
+  "homepage": "https://evren.dev",
+  "description": "Personel web site.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
