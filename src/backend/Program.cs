@@ -55,21 +55,21 @@ var ahaSendApiUrl = configuration.GetValue<string>("Ahasend:ApiUrl");
 var from = configuration.GetSection("Ahasend:From").Get<From>();
 var recipients = configuration.GetSection("Ahasend:Recipients").Get<List<Recipient>>();
 
-app.MapPost("/sendmail", async (HttpClient httpClient, ReCaptcha recaptcha, [FromBody] Request emailRequest) =>
+app.MapPost("/sendmail", async (HttpClient httpClient, ReCaptcha recaptcha, [FromBody] FormRequest formRequest) =>
 {
-    bool checkCaptcha = await recaptcha.IsValid(emailRequest.Response ?? string.Empty);
+    bool checkCaptcha = await recaptcha.IsValid(formRequest.Response ?? string.Empty);
     if (!checkCaptcha)
         return Results.BadRequest("Invalid reCaptcha token.");
 
     var apiKey = ahaSendApiKey;
     var emailContent = new Content
     {
-        Subject = emailRequest.Subject,
-        TextBody = $"Tel: {emailRequest.Phone}\n\nMessage: {emailRequest.Message}",
+        Subject = formRequest.Subject,
+        TextBody = $"Tel: {formRequest.Phone}\n\nMessage: {formRequest.Message}",
         ReplyTo = new ReplyTo
         {
-            Email = emailRequest.Email,
-            Name = emailRequest.Name
+            Email = formRequest.Email,
+            Name = formRequest.Name
         }
     };
 

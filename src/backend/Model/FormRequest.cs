@@ -1,6 +1,6 @@
 namespace EvrenDev.Model;
 
-public class Request
+public class FormRequest
 {
     public string? Name { get; set; }
     public string? Email { get; set; }
