@@ -6,13 +6,14 @@ import vue from "@vitejs/plugin-vue"
 import svgLoader from "vite-svg-loader"
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
 import vueDevTools from "vite-plugin-vue-devtools"
+import viteImagemin from "vite-plugin-imagemin"
 
 // https://vite.dev/config/
 export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        api: "modern-compiler", // or "modern"
+        api: "modern-compiler",
       },
     },
   },
@@ -28,6 +29,15 @@ export default defineConfig({
     }),
     manualChunksPlugin(),
     svgLoader(),
+    viteImagemin({
+      gifsicle: { optimizationLevel: 7 },
+      optipng: { optimizationLevel: 7 },
+      mozjpeg: { quality: 20 },
+      pngquant: { quality: [0.6, 0.8] },
+      svgo: {
+        plugins: [{ name: "removeViewBox" }, { name: "cleanupIDs" }],
+      },
+    }),
   ],
   resolve: {
     alias: {
@@ -55,10 +65,15 @@ export default defineConfig({
               .toLowerCase()}-[hash][extname]`
           }
 
-          // default value
-          // ref: https://rollupjs.org/guide/en/#outputassetfilenames
           return "assets/[name]-[hash][extname]"
         },
+      },
+    },
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
       },
     },
     sourcemap: false,
