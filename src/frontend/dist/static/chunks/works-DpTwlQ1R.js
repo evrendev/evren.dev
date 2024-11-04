@@ -1,0 +1,1 @@
+import{_ as e,d as s,b as r,o as t}from"./vendor-DBgJBiBR.js";const n={},a={class:"works"};function c(_,o){return t(),s("div",a,o[0]||(o[0]=[r("span",null,"Portfolio",-1)]))}const d=e(n,[["render",c]]);export{d as default};
