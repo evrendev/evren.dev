@@ -14,11 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    id="preloader"
-    :class="{ preloaded: !showPreloader }"
-    class="animate__animated animate__fadeOut animate_fadeIn"
-  >
+  <div id="preloader" :class="{ preloaded: !showPreloader }">
     <div class="loader_line"></div>
   </div>
 </template>
