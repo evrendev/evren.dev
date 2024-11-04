@@ -41,13 +41,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          publish_dir: ./src/frontend/dist
+          path: ./src/frontend/dist
           keep_files: false
           force_orphan: true
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v2
 
       # - name: Deploy to GitHub Pages
       #   id: deployment
