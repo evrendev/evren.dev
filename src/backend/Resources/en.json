@@ -1,0 +1,8 @@
+{
+  "recaptachErrorMessage": "You need to verify that you are not a robot",
+  "sendMessageSuccess": "Dear {0}, your message has reached us successfully. Thanks",
+  "sendMessageFailure": "Dear {0}, an error occurred while sending your message to us. Please try again later.",
+  "captchaError": "Captcha validation failed. Please try again.",
+  "phone": "Phone",
+  "message": "Message"
+}

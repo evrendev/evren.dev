@@ -1,0 +1,8 @@
+{
+  "recaptachErrorMessage": "Sie müssen bestätigen, dass Sie kein Roboter sind",
+  "sendMessageSuccess": "Sehr geehrter {0}, Ihre Nachricht hat uns erfolgreich erreicht. Vielen Dank",
+  "sendMessageFailure": "Sehr geehrter {0}, beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.",
+  "captchaError": "Captcha-Überprüfung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+  "phone": "Telefon",
+  "message": "Nachricht"
+}
