@@ -1,39 +1,45 @@
-name: Deploy
+name: Deploy to Github Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Run Git commands
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.x
+
+      - name: Install dependencies and build
+        working-directory: ./src/frontend
         run: |
-          git config --global user.email "mail@evren.dev"
-          git config --global user.name "evrendev"
-
-          # Change Directory
-          cd ./src/frontend
-
-          # Install depedencies
-          npm i
-
-          # build
+          npm install
           npm run build
 
-          # Change Directory
-          cd ../../
-
-          echo 'Deploying to gh-pages...'
-
-          git add dist -f
-          git commit -m 'Deploy' 
-          git subtree push --prefix ./dist origin gh-pages   --force
-
-          echo 'Done'
-        env:
-          github-token: ${{ secrets.GH_TOKEN }}
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src/frontend/dist
+          keep_files: false
+          force_orphan: true
