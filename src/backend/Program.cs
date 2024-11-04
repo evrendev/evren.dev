@@ -86,12 +86,21 @@ app.MapPost("/sendmail", async (HttpClient httpClient, ReCaptcha recaptcha, [Fro
     httpClient.DefaultRequestHeaders.Add("x-api-key", apiKey);
 
     var response = await httpClient.PostAsync(ahaSendApiUrl, content);
+    var responseContent = await response.Content.ReadAsStringAsync();
+    var jsonResponse = new JsonResponse()
+    {
+        Data = responseContent
+    };
 
     if (response.IsSuccessStatusCode)
-        return Results.Ok("Email sent successfully.");
+    {
+        jsonResponse.Success = true;
+        jsonResponse.Message = "Email sent successfully.";
 
-    var errorContent = await response.Content.ReadAsStringAsync();
-    return Results.Problem(errorContent, statusCode: (int)response.StatusCode);
+        return Results.Ok(jsonResponse);
+    }
+
+    return Results.Problem(responseContent, statusCode: (int)response.StatusCode);
 });
 
 app.Run();
