@@ -1,4 +1,5 @@
 <script setup>
+import { defineEmits } from "vue"
 import { MenuItems } from "../shared/"
 import { EmailLink, SocialMediaAccounts } from "@/components/shared/"
 
@@ -8,11 +9,16 @@ const props = defineProps({
     required: true,
   },
 })
+
+const emit = defineEmits(["close-mobile-menu"])
 </script>
 
 <template>
   <div class="mobile-menu" :class="{ opened: props.isOpened }">
-    <menu-items class="mobile-menu-items" />
+    <menu-items
+      class="mobile-menu-items"
+      @close-mobile-menu="emit('close-mobile-menu')"
+    />
     <div class="extra">
       <social-media-accounts style="margin-bottom: 5px" />
       <email-link />

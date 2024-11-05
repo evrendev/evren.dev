@@ -1,28 +1,43 @@
 <script setup>
 import { useI18n } from "vue-i18n"
+import { defineEmits } from "vue"
 const { t } = useI18n()
+
+const emit = defineEmits(["close-mobile-menu"])
 </script>
 
 <template>
   <div>
     <ul>
       <li>
-        <router-link :to="{ name: 'home' }">
+        <router-link
+          :to="{ name: 'home' }"
+          @click.prevent="emit('close-mobile-menu')"
+        >
           {{ t("components.nav.home.text") }}
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'about' }">
+        <router-link
+          :to="{ name: 'about' }"
+          @click.prevent="emit('close-mobile-menu')"
+        >
           {{ t("components.nav.about.text") }}
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'works' }">
+        <router-link
+          :to="{ name: 'works' }"
+          @click.prevent="emit('close-mobile-menu')"
+        >
           {{ t("components.nav.works.text") }}
         </router-link>
       </li>
       <li>
-        <router-link :to="{ name: 'contact' }">
+        <router-link
+          :to="{ name: 'contact' }"
+          @click.prevent="emit('close-mobile-menu')"
+        >
           {{ t("components.nav.contact.text") }}
         </router-link>
       </li>
