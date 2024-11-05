@@ -4,30 +4,28 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <ul class="transition_link">
-      <li>
-        <router-link :to="{ name: 'home' }">
-          {{ t("components.nav.home.text") }}
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'about' }">
-          {{ t("components.nav.about.text") }}
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'works' }">
-          {{ t("components.nav.works.text") }}
-        </router-link>
-      </li>
-      <li>
-        <router-link :to="{ name: 'contact' }">
-          {{ t("components.nav.contact.text") }}
-        </router-link>
-      </li>
-    </ul>
-  </div>
+  <ul class="transition_link">
+    <li>
+      <router-link :to="{ name: 'home' }">
+        {{ t("components.nav.home.text") }}
+      </router-link>
+    </li>
+    <li>
+      <router-link :to="{ name: 'about' }">
+        {{ t("components.nav.about.text") }}
+      </router-link>
+    </li>
+    <li>
+      <router-link :to="{ name: 'works' }">
+        {{ t("components.nav.works.text") }}
+      </router-link>
+    </li>
+    <li>
+      <router-link :to="{ name: 'contact' }">
+        {{ t("components.nav.contact.text") }}
+      </router-link>
+    </li>
+  </ul>
 </template>
 
 <style type="scss" scoped>

@@ -1,10 +1,17 @@
 <script setup>
-import { MenuItems } from "./"
+import { MenuItems } from "../shared/"
 import { EMail, SocialMediaAccounts } from "@/components/shared/"
+
+const props = defineProps({
+  isOpened: {
+    type: Boolean,
+    required: true,
+  },
+})
 </script>
 
 <template>
-  <div class="mobile-menu" :class="{ opened: isOpened }">
+  <div class="mobile-menu" :class="{ opened: props.isOpened }">
     <menu-items class="menu-items" />
     <div class="extra">
       <social-media-accounts style="margin-bottom: 5px" />

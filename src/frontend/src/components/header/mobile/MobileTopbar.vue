@@ -1,21 +1,26 @@
 <script setup>
-import { ref } from "vue"
-
+import { defineEmits } from "vue"
 import { TextLogo } from "../shared/"
 import MobileMenuButton from "./MobileMenuButton.vue"
 
-const isOpened = ref(false)
+const emit = defineEmits(["toggle-menu"])
 
-const toggleMenu = () => {
-  isOpened.value = !isOpened.value
-}
+const props = defineProps({
+  isOpened: {
+    type: Boolean,
+    required: true,
+  },
+})
 </script>
 
 <template>
   <div class="page_topbar">
     <div class="topbar_inner">
       <text-logo />
-      <mobile-menu-button @click="toggleMenu" />
+      <mobile-menu-button
+        @click.prevent="emit('toggle-menu')"
+        :is-opened="props.isOpened"
+      />
     </div>
   </div>
 </template>

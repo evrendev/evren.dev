@@ -1,13 +1,21 @@
+<script setup>
+const props = defineProps({
+  isOpened: {
+    type: Boolean,
+    required: true,
+  },
+})
+</script>
 <template>
   <div class="trigger">
-    <div class="hamburger-menu">
-      <input type="checkbox" id="menu_checkbox" />
+    <button class="hamburger-menu">
+      <input type="checkbox" class="menu-checkbox" :checked="props.isOpened" />
       <label for="menu_checkbox">
         <div></div>
         <div></div>
         <div></div>
       </label>
-    </div>
+    </button>
   </div>
 </template>
 
@@ -17,6 +25,8 @@
   top: 20px;
 
   .hamburger-menu {
+    border: none;
+    background-color: transparent;
     display: inline-block;
     margin: 0;
 
@@ -56,18 +66,19 @@
         }
       }
     }
+    input {
+      &.menu-checkbox {
+        display: none;
 
-    #menu_checkbox {
-      display: none;
+        &:checked + label {
+          transform: translateY(-50%) rotateZ(-90deg);
+        }
 
-      &:checked + label {
-        transform: translateY(-50%) rotateZ(-90deg);
-      }
-
-      &:checked + label div {
-        width: 6px;
-        margin-left: 12px;
-        margin-bottom: 3px;
+        &:checked + label div {
+          width: 6px;
+          margin-left: 12px;
+          margin-bottom: 3px;
+        }
       }
     }
   }
