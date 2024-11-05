@@ -33,6 +33,7 @@ import { EmailLink, SocialMediaAccounts } from "../shared/"
     right: 0px;
     justify-content: center;
     gap: 20px;
+    background: #fff;
   }
 }
 </style>
