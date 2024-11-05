@@ -1,10 +1,11 @@
-export { default as SvgIcon } from "./SvgIcon.vue"
-export { default as MobileMenuButton } from "./MobileMenuButton.vue"
-export { default as Preloader } from "./PreloaderComponent.vue"
-export { default as EMail } from "./MailToComponent.vue"
-export { default as SocialMediaAccounts } from "./SocialMediaLinksComponent.vue"
-export { default as MobileMenu } from "./MobileMenu.vue"
-export { default as HeaderMenu } from "./header/DesktopHeader.vue"
-export { default as FooterMenu } from "./PageFooter.vue"
-export { default as Borders } from "./PageBorders.vue"
-export { default as Content } from "./PageContent.vue"
+// Layout Components
+export { default as Preloader } from "./layout/PreloaderComponent.vue"
+export { default as PageBorders } from "./layout/PageBorders.vue"
+export { default as PageContent } from "./layout/PageContent.vue"
+
+//Header Components
+export { default as MobileHeader } from "./header/MobileHeader.vue"
+export { default as DesktopHeader } from "./header/DesktopHeader.vue"
+
+//Footer Components
+export { default as PageFooter } from "./footer/PageFooter.vue"

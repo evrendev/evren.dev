@@ -1,5 +1,10 @@
+<script setup>
+import { useI18n } from "vue-i18n"
+const { t } = useI18n()
+</script>
+
 <template>
-  <div class="desktop-menu">
+  <div>
     <ul class="transition_link">
       <li>
         <router-link :to="{ name: 'home' }">
@@ -25,37 +30,30 @@
   </div>
 </template>
 
-<script setup>
-import { useI18n } from "vue-i18n"
-const { t } = useI18n()
-</script>
+<style type="scss" scoped>
+ul {
+  display: flex;
+  align-items: center;
 
-<style lang="scss" scoped>
-.desktop-menu {
-  ul {
-    display: flex;
-    align-items: center;
+  li {
+    margin-right: 40px;
 
-    li {
-      margin-right: 40px;
+    @media (max-width: 1600px) {
+      margin-right: 30px;
+    }
 
-      @media (max-width: 1600px) {
-        margin-right: 30px;
+    a {
+      color: var(--bc);
+      transition: all 0.3s ease;
+
+      &.exact-active,
+      &:hover {
+        color: #000;
       }
+    }
 
-      a {
-        color: var(--bc);
-        transition: all 0.3s ease;
-
-        &.exact-active,
-        &:hover {
-          color: #000;
-        }
-      }
-
-      &:last-child {
-        margin-right: 0px;
-      }
+    &:last-child {
+      margin-right: 0px;
     }
   }
 }

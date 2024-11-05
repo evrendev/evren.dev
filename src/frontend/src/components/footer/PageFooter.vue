@@ -1,5 +1,5 @@
 <script setup>
-import { EMail, SocialMediaAccounts } from "."
+import { EMail, SocialMediaAccounts } from "../shared/"
 </script>
 
 <template>

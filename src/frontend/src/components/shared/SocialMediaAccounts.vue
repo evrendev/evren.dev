@@ -1,5 +1,5 @@
 <script setup>
-import { SvgIcon } from "."
+import SvgIcon from "./SvgIcon.vue"
 </script>
 
 <template>

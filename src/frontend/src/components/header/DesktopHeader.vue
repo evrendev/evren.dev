@@ -1,12 +1,11 @@
 <script setup>
-import TextLogo from "./TextLogo.vue"
-import MenuItems from "./MenuItems.vue"
+import { TextLogo, MenuItems } from "./"
 </script>
 
 <template>
   <div class="page_header">
     <text-logo />
-    <menu-items />
+    <menu-items class="desktop-menu" />
   </div>
 </template>
 
