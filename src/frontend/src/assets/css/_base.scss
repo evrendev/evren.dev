@@ -69,24 +69,6 @@ img.svg {
   color: var(--default-font-color);
 }
 
-.container {
-  max-width: 1170px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  padding: 0px 20px;
-  position: relative;
-
-  @media (max-width: 1600px) {
-    max-width: 1070px;
-  }
-
-  @media (max-width: 1024px) {
-    max-width: 100%;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -171,6 +153,24 @@ div.wrapper {
 
         &::-webkit-scrollbar {
           width: 0px;
+        }
+
+        .container {
+          max-width: 1170px;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          height: auto;
+          padding: 0px 20px;
+          position: relative;
+
+          @media (max-width: 1600px) {
+            max-width: 1070px;
+          }
+
+          @media (max-width: 1024px) {
+            max-width: 100%;
+          }
         }
       }
     }
