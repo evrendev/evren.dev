@@ -1,10 +1,10 @@
 <script setup>
-import { EMail, SocialMediaAccounts } from "../shared/"
+import { EmailLink, SocialMediaAccounts } from "../shared/"
 </script>
 
 <template>
   <div class="page_footer">
-    <EMail />
+    <email-link />
     <social-media-accounts />
   </div>
 </template>

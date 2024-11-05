@@ -1,6 +1,6 @@
 <script setup>
 import { MenuItems } from "../shared/"
-import { EMail, SocialMediaAccounts } from "@/components/shared/"
+import { EmailLink, SocialMediaAccounts } from "@/components/shared/"
 
 const props = defineProps({
   isOpened: {
@@ -15,7 +15,7 @@ const props = defineProps({
     <menu-items class="mobile-menu-items" />
     <div class="extra">
       <social-media-accounts style="margin-bottom: 5px" />
-      <EMail />
+      <email-link />
     </div>
   </div>
 </template>
