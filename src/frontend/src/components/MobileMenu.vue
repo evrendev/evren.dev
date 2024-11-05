@@ -1,9 +1,8 @@
 <script setup>
-import "hamburgers/dist/hamburgers.min.css"
 import { ref } from "vue"
 import { RouterLink } from "vue-router"
 import { useI18n } from "vue-i18n"
-import { EMail, SocialMediaAccounts } from "."
+import { EMail, SocialMediaAccounts, MobileMenuButton } from "."
 
 const isOpened = ref(false)
 const { t } = useI18n()
@@ -22,15 +21,7 @@ const toggleMenu = () => {
         </router-link>
       </div>
       <div class="trigger">
-        <div
-          class="hamburger hamburger--slider"
-          @click="toggleMenu"
-          :class="{ 'is-active': isOpened }"
-        >
-          <div class="hamburger-box">
-            <div class="hamburger-inner"></div>
-          </div>
-        </div>
+        <MobileMenuButton @click="toggleMenu" />
       </div>
     </div>
   </div>
@@ -102,21 +93,7 @@ const toggleMenu = () => {
 
   .trigger {
     position: relative;
-    top: 5px;
-
-    .hamburger {
-      padding: 0px;
-      .hamburger-box {
-        width: 30px;
-
-        .hamburger-inner,
-        .hamburger-inner:after,
-        .hamburger-inner:before {
-          width: 30px;
-          height: 2px;
-        }
-      }
-    }
+    top: 20px;
   }
 }
 

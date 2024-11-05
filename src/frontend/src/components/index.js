@@ -1,4 +1,5 @@
 export { default as SvgIcon } from "./SvgIcon.vue"
+export { default as MobileMenuButton } from "./MobileMenuButton.vue"
 export { default as Preloader } from "./PreloaderComponent.vue"
 export { default as EMail } from "./MailToComponent.vue"
 export { default as SocialMediaAccounts } from "./SocialMediaLinksComponent.vue"
