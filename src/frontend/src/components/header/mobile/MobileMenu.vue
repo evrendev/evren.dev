@@ -1,6 +1,6 @@
 <script setup>
 import { MenuItems } from "./"
-import { EMail, SocialMediaAccounts } from "../shared/"
+import { EMail, SocialMediaAccounts } from "@/components/shared/"
 </script>
 
 <template>

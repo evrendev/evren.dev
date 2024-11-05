@@ -1,3 +1,16 @@
+<script setup>
+import { ref } from "vue"
+
+import { TextLogo } from "../shared/"
+import MobileMenuButton from "./MobileMenuButton.vue"
+
+const isOpened = ref(false)
+
+const toggleMenu = () => {
+  isOpened.value = !isOpened.value
+}
+</script>
+
 <template>
   <div class="page_topbar">
     <div class="topbar_inner">
@@ -6,18 +19,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue"
-
-import { TextLogo, MobileMenuButton } from "./"
-
-const isOpened = ref(false)
-
-const toggleMenu = () => {
-  isOpened.value = !isOpened.value
-}
-</script>
 
 <style lang="scss" scoped>
 .page_topbar {

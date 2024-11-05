@@ -1,5 +1,5 @@
 <script setup>
-import { TextLogo, MenuItems } from "./"
+import { TextLogo, MenuItems } from "../shared/"
 </script>
 
 <template>
