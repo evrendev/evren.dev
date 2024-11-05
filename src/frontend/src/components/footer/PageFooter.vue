@@ -29,7 +29,10 @@ import { EMail, SocialMediaAccounts } from "../shared/"
   }
 
   @media (max-width: 1024px) {
-    display: none;
+    left: 0px;
+    right: 0px;
+    justify-content: center;
+    gap: 20px;
   }
 }
 </style>
