@@ -9,7 +9,7 @@ const { t } = useI18n()
 <template>
   <div class="section contact">
     <div class="container">
-      <div class="page_contact">
+      <div class="page">
         <page-title :title="t('page.contact.title')" />
 
         <info-list />
@@ -21,7 +21,7 @@ const { t } = useI18n()
 </template>
 
 <style lang="scss" scoped>
-.page_contact {
+.page {
   width: 100%;
   padding: 100px 0px;
 }
