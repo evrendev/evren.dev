@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
   <div class="mobile-menu" :class="{ opened: props.isOpened }">
-    <menu-items class="menu-items" />
+    <menu-items class="mobile-menu-items" />
     <div class="extra">
       <social-media-accounts style="margin-bottom: 5px" />
       <EMail />

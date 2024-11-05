@@ -11,6 +11,8 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <mobile-topbar :is-opened="isOpened" @toggle-menu="toggleMenu" />
-  <mobile-menu :is-opened="isOpened" />
+  <div class="mobile-header">
+    <mobile-topbar :is-opened="isOpened" @toggle-menu="toggleMenu" />
+    <mobile-menu :is-opened="isOpened" />
+  </div>
 </template>

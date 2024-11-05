@@ -4,28 +4,30 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <ul class="transition_link">
-    <li>
-      <router-link :to="{ name: 'home' }">
-        {{ t("components.nav.home.text") }}
-      </router-link>
-    </li>
-    <li>
-      <router-link :to="{ name: 'about' }">
-        {{ t("components.nav.about.text") }}
-      </router-link>
-    </li>
-    <li>
-      <router-link :to="{ name: 'works' }">
-        {{ t("components.nav.works.text") }}
-      </router-link>
-    </li>
-    <li>
-      <router-link :to="{ name: 'contact' }">
-        {{ t("components.nav.contact.text") }}
-      </router-link>
-    </li>
-  </ul>
+  <div>
+    <ul>
+      <li>
+        <router-link :to="{ name: 'home' }">
+          {{ t("components.nav.home.text") }}
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'about' }">
+          {{ t("components.nav.about.text") }}
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'works' }">
+          {{ t("components.nav.works.text") }}
+        </router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'contact' }">
+          {{ t("components.nav.contact.text") }}
+        </router-link>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style type="scss" scoped>
@@ -52,6 +54,23 @@ ul {
 
     &:last-child {
       margin-right: 0px;
+    }
+  }
+}
+
+.mobile-menu-items {
+  width: 100%;
+  height: auto;
+  text-align: right;
+  padding: 100px 20px 0px 20px;
+
+  ul {
+    display: block;
+    margin: 0;
+    list-style: none;
+
+    li {
+      margin: 0 0 7px 0;
     }
   }
 }

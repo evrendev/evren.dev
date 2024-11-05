@@ -14,8 +14,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="page_topbar">
-    <div class="topbar_inner">
+  <div class="mobile-topbar">
+    <div class="topbar-inner">
       <text-logo />
       <mobile-menu-button
         @click.prevent="emit('toggle-menu')"
@@ -26,7 +26,7 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
-.page_topbar {
+.mobile-topbar {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -40,7 +40,7 @@ const props = defineProps({
     display: block;
   }
 
-  .topbar_inner {
+  .topbar-inner {
     width: 100%;
     height: 100%;
     display: flex;

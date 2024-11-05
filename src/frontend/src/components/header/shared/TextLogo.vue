@@ -1,5 +1,5 @@
 <template>
-  <div class="logo transition_link" data-type="text">
+  <div class="logo">
     <router-link :to="{ name: 'home' }">
       <h3>EVREN</h3>
     </router-link>

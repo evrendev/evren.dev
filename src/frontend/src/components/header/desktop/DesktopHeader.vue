@@ -3,14 +3,14 @@ import { TextLogo, MenuItems } from "../shared/"
 </script>
 
 <template>
-  <div class="page_header">
+  <div class="desktop-header">
     <text-logo />
-    <menu-items class="desktop-menu" />
+    <menu-items class="desktop-menu-items" />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.page_header {
+.desktop-header {
   position: fixed;
   top: 0px;
   right: 70px;
@@ -21,6 +21,12 @@ import { TextLogo, MenuItems } from "../shared/"
   justify-content: space-between;
   z-index: 11;
   padding: 0px 60px;
+
+  @media (max-width: 1600px) {
+    left: 55px;
+    right: 55px;
+    height: 55px;
+  }
 
   @media (max-width: 1024px) {
     display: none;
