@@ -188,7 +188,7 @@ const onInvalidSubmit = ({ errors }) => {
           @expired="handleCaptchaExpired"
         ></vue-recaptcha>
       </div>
-      <div class="page_button">
+      <div class="page-button">
         <button
           type="submit"
           id="send_message"
@@ -298,44 +298,6 @@ const onInvalidSubmit = ({ errors }) => {
 
       .page-captcha {
         width: 100%;
-      }
-
-      .page_button {
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        margin-top: 15px;
-
-        &:before {
-          content: "";
-          position: absolute;
-          top: 0px;
-          bottom: 0px;
-          left: 0px;
-          right: 0px;
-          background-color: #000;
-          transform: translateY(100%);
-          pointer-events: none;
-          transition: all 0.3s ease;
-        }
-
-        &:hover:before {
-          transform: translateY(0);
-        }
-
-        button {
-          display: block;
-          padding: 15px 35px;
-          background-color: #666;
-          cursor: pointer;
-
-          span {
-            color: #fff;
-            font-weight: 500;
-            font-size: 13px;
-            text-transform: uppercase;
-          }
-        }
       }
     }
   }
