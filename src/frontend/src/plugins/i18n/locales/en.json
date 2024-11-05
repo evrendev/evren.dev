@@ -29,11 +29,13 @@
   "page": {
     "home": {
       "meta": {
-        "title": "",
-        "description": "",
-        "keywords": ""
+        "title": "Home",
+        "description": "I'm a software developer with a passion for web technologies. I'm currently working as a full-stack developer at a startup in Germany. I love to build web applications and websites with modern technologies.",
+        "keywords": "software developer, web developer, full-stack developer, web technologies, web applications, websites, modern technologies"
       },
-      "title": "Home"
+      "title": "Home",
+      "get-in-touch": "Get In Touch",
+      "description": "I'm a software developer with a passion for web technologies. I'm currently working as a full-stack developer at a startup in Germany. I love to build web applications and websites with modern technologies."
     },
     "contact": {
       "meta": {

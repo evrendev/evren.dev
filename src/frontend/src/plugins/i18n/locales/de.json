@@ -16,7 +16,7 @@
         "url": "about"
       },
       "works": {
-        "text": "Arbeiten",
+        "text": "Projekte",
         "url": "works"
       },
       "contact": {
@@ -29,15 +29,17 @@
   "page": {
     "home": {
       "meta": {
-        "title": "",
-        "description": "",
-        "keywords": ""
+        "title": "Startseite",
+        "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen.",
+        "keywords": "Softwareentwickler, Webentwickler, Full-Stack-Entwickler, Webtechnologien, Webanwendungen, Websites, moderne Technologien"
       },
-      "title": "Startseite"
+      "title": "Startseite",
+      "get-in-touch": "Kontakt aufnehmen",
+      "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen."
     },
     "contact": {
       "meta": {
-        "title": "",
+        "title": "Kontakt",
         "description": "",
         "keywords": ""
       },
@@ -52,7 +54,7 @@
           "text": "E-Mail",
           "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
           "required": "Sie müssen Ihre E-Mail-Adresse eingeben",
-          "invalid": "Ihre E-Mail-Adresse scheint nicht gültig zu sein"
+          "invalid": "Ihre E-Mail-Adresse scheint ungültig zu sein"
         },
         "phone": {
           "text": "Telefon",
@@ -65,8 +67,12 @@
         },
         "message": {
           "text": "Nachricht",
-          "placeholder": "Schreiben Sie Ihre Frage hier",
+          "placeholder": "Schreiben Sie hier Ihre Frage",
           "required": "Sie müssen eine Nachricht eingeben"
+        },
+        "captcha": {
+          "expired": "Verifizierung abgelaufen. Aktivieren Sie das Kontrollkästchen erneut",
+          "required": "Sie müssen bestätigen, dass Sie kein Roboter sind"
         },
         "send": "Nachricht senden"
       },
