@@ -176,7 +176,7 @@ const onInvalidSubmit = ({ errors }) => {
           <error-message name="message" as="div" class="has-error" />
         </li>
       </ul>
-      <div class="page_captcha">
+      <div class="page-captcha">
         <vue-recaptcha
           ref="googleRecaptcha"
           :language="locale"
@@ -298,6 +298,7 @@ const onInvalidSubmit = ({ errors }) => {
 
       .page-captcha {
         width: 100%;
+        margin: 15px 0;
       }
     }
   }

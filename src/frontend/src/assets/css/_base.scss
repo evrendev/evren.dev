@@ -176,7 +176,7 @@ div.wrapper {
             display: inline-block;
             position: relative;
             overflow: hidden;
-            margin-top: 15px;
+            width: max-content;
 
             &:before {
               content: "";

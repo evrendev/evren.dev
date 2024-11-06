@@ -125,6 +125,9 @@ const { t } = useI18n()
       .right {
         width: 50%;
         padding-left: 50px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
 
         @media (max-width: 1600px) {
           padding-left: 0px;
@@ -136,8 +139,6 @@ const { t } = useI18n()
         }
 
         .name {
-          margin-bottom: 13px;
-
           h3 {
             font-family: "Archivo Black";
             font-size: 48px;
