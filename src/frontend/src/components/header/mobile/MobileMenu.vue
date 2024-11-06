@@ -22,9 +22,10 @@ const emit = defineEmits(["close-mobile-menu"])
     <div class="extra">
       <social-media-accounts style="margin-bottom: 5px" />
       <email-link />
-      <div class="fixed-bottom">
-        <locale-switcher />
-      </div>
+    </div>
+
+    <div class="fixed-bottom">
+      <locale-switcher />
     </div>
   </div>
 </template>
@@ -45,8 +46,23 @@ const emit = defineEmits(["close-mobile-menu"])
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 
+  .fixed-bottom {
+    right: -200px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
   &.opened {
     right: 0px;
+
+    .fixed-bottom {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
   }
 
   .menu-items {
@@ -61,12 +77,6 @@ const emit = defineEmits(["close-mobile-menu"])
     text-align: right;
     padding: 0px 20px;
     margin-top: 50px;
-
-    .fixed-bottom {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-    }
   }
 }
 </style>
