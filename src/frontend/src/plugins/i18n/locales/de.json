@@ -2,7 +2,7 @@
   "appTitle": "Evren.Dev",
   "logo": "@:appTitle logo",
   "locale": {
-    "en": "Englisch",
+    "en": "English",
     "de": "Deutsch"
   },
   "components": {

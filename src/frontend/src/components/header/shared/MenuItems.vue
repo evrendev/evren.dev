@@ -1,6 +1,7 @@
 <script setup>
 import { useI18n } from "vue-i18n"
 import { defineEmits } from "vue"
+import { LocaleSwitcher } from "."
 const { t } = useI18n()
 
 const emit = defineEmits(["close-mobile-menu"])
@@ -40,6 +41,9 @@ const emit = defineEmits(["close-mobile-menu"])
         >
           {{ t("components.nav.contact.text") }}
         </router-link>
+      </li>
+      <li>
+        <locale-switcher />
       </li>
     </ul>
   </div>

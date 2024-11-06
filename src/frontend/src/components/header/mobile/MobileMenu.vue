@@ -1,6 +1,6 @@
 <script setup>
 import { defineEmits } from "vue"
-import { MenuItems } from "../shared/"
+import { MenuItems, LocaleSwitcher } from "../shared/"
 import { EmailLink, SocialMediaAccounts } from "@/components/shared/"
 
 const props = defineProps({
@@ -22,6 +22,9 @@ const emit = defineEmits(["close-mobile-menu"])
     <div class="extra">
       <social-media-accounts style="margin-bottom: 5px" />
       <email-link />
+      <div class="fixed-bottom">
+        <locale-switcher />
+      </div>
     </div>
   </div>
 </template>
@@ -58,6 +61,12 @@ const emit = defineEmits(["close-mobile-menu"])
     text-align: right;
     padding: 0px 20px;
     margin-top: 50px;
+
+    .fixed-bottom {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
   }
 }
 </style>
