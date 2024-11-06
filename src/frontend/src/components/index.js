@@ -1,5 +1,5 @@
 // Layout Components
-export { default as Preloader } from "./layout/PreloaderComponent.vue"
+export { default as Preloader } from "./layout/PreLoader.vue"
 export { default as PageBorders } from "./layout/PageBorders.vue"
 export { default as PageContent } from "./layout/PageContent.vue"
 
