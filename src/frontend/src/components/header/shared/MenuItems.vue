@@ -49,7 +49,7 @@ const emit = defineEmits(["close-mobile-menu"])
   </div>
 </template>
 
-<style type="scss" scoped>
+<style lang="scss" scoped>
 ul {
   display: flex;
   align-items: center;
@@ -73,6 +73,10 @@ ul {
 
     &:last-child {
       margin-right: 0px;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
   }
 }
