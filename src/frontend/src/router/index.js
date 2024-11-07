@@ -33,7 +33,7 @@ const router = createRouter({
           },
         },
         {
-          path: "about",
+          path: "about-me",
           name: "about",
           alias: ["uber-mich"],
           component: () =>
@@ -52,7 +52,7 @@ const router = createRouter({
         {
           path: "works",
           name: "works",
-          alias: ["arbeiten"],
+          alias: ["projekte"],
           component: () =>
             import(
               /* webpackChunkName: "works" */ "@/views/works/WorksView.vue"
