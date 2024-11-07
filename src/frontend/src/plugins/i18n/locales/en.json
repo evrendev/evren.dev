@@ -12,8 +12,8 @@
         "url": ""
       },
       "about": {
-        "text": "About",
-        "url": "about"
+        "text": "About Me",
+        "url": "about-me"
       },
       "works": {
         "text": "Works",
@@ -87,6 +87,19 @@
       "phone": {
         "formatted": "+49 (176) 5823 3031",
         "plain": "+4917658233031"
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "About Me",
+        "description": "I'm a software developer with a passion for web technologies. I'm currently working as a full-stack developer at a startup in Germany. I love to build web applications and websites with modern technologies.",
+        "keywords": "software developer, web developer, full-stack developer, web technologies, web applications, websites, modern technologies"
+      },
+      "title": "About Me",
+      "biography": {
+        "title": "Biography",
+        "content": "Hello, my name is Evren Yeniev. I began my career specializing in server and network systems, gaining expertise in this field over 12 years. Later, my interest in programming led me to pursue a degree in software engineering, shifting my focus to the web-based software field, where I’ve now been working for the past 9 years. On the backend, I primarily work with ASP.NET and ASP.NET Core alongside MS SQL, while my frontend toolkit includes HTML5, CSS3, JavaScript, jQuery, and Vue.js. I’m committed to writing clean, maintainable code and strictly adhere to design principles to ensure my work is both efficient and visually appealing. My passion lies in building responsive, user-friendly web applications that meet modern standards for functionality and performance. Whether it’s creating a straightforward website or a complex application, I strive to bring innovative ideas to life with precision and attention to detail.",
+        "download-cv": "Download CV"
       }
     }
   }

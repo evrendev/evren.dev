@@ -13,15 +13,15 @@
       },
       "about": {
         "text": "Über mich",
-        "url": "about"
+        "url": "uber-mich"
       },
       "works": {
         "text": "Projekte",
-        "url": "works"
+        "url": "projekte"
       },
       "contact": {
         "text": "Kontakt",
-        "url": "contact"
+        "url": "kontakt"
       },
       "back": "Zurück"
     }
@@ -87,6 +87,19 @@
       "phone": {
         "formatted": "+49 (176) 5823 3031",
         "plain": "+4917658233031"
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "Über mich",
+        "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen.",
+        "keywords": "Softwareentwickler, Webentwickler, Full-Stack-Entwickler, Webtechnologien, Webanwendungen, Websites, moderne Technologien"
+      },
+      "title": "Über mich",
+      "biography": {
+        "title": "Biografie",
+        "content": "Hallo, mein Name ist Evren Yeniev. Ich begann meine Karriere mit einem Schwerpunkt auf Server- und Netzwerksysteme und sammelte über 12 Jahre Erfahrung in diesem Bereich. Später führte mich mein Interesse an Programmierung zu einem Studium in Software Engineering, wodurch ich mich auf den Bereich der web-basierten Software konzentrierte, in dem ich nun seit 9 Jahren tätig bin. Im Backend arbeite ich hauptsächlich mit ASP.NET und ASP.NET Core zusammen mit MS SQL, während mein Frontend-Toolkit HTML5, CSS3, JavaScript, jQuery und Vue.js umfasst. Ich lege großen Wert darauf, sauberen und wartbaren Code zu schreiben und halte mich strikt an Designprinzipien, um sicherzustellen, dass meine Arbeit sowohl effizient als auch optisch ansprechend ist. Meine Leidenschaft liegt in der Entwicklung von responsiven, benutzerfreundlichen Webanwendungen, die modernen Standards für Funktionalität und Leistung entsprechen. Ob es darum geht, eine einfache Website oder eine komplexe Anwendung zu erstellen – ich strebe danach, innovative Ideen mit Präzision und Liebe zum Detail zum Leben zu erwecken.",
+        "download-cv": "Lebenslauf herunterladen"
       }
     }
   }
