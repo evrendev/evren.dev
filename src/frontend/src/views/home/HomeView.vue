@@ -10,7 +10,10 @@ const { t } = useI18n()
         <div class="left square">
           <div class="box">
             <div class="image">
-              <img src="@/assets/images/evren-yeniev.webp" alt="Evren Yeniev" />
+              <img
+                src="@/assets/images/about-me/evren-yeniev.webp"
+                alt="Evren Yeniev"
+              />
               <div class="main"></div>
             </div>
           </div>
@@ -88,7 +91,7 @@ const { t } = useI18n()
             }
 
             .main {
-              background-image: url("@/assets/images/evren-yeniev.webp");
+              background-image: url("@/assets/images/about-me/evren-yeniev.webp");
               border-radius: 0px;
 
               position: absolute;
