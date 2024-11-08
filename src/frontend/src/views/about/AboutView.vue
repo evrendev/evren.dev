@@ -28,12 +28,16 @@ const { t } = useI18n()
 
     .page {
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       display: flex;
       justify-content: center;
       position: relative;
       flex-direction: column;
       row-gap: 35px;
+
+      @media screen and (max-width: 1024px) {
+        padding: 100px 0;
+      }
     }
   }
 }
