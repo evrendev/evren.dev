@@ -88,6 +88,33 @@ const works = reactive([
     url: "https://akademi.turmepa.org.tr/",
     sourceCode: null,
   },
+  {
+    title: t("page.works.some-projects.thenbaexhibition.title"),
+    category: t("page.works.some-projects.thenbaexhibition.category"),
+    description: t("page.works.some-projects.thenbaexhibition.description"),
+    technologies: ["ASP Core WebAPI", "Javascript", "SASS", "Figma"],
+    client: t("page.works.some-projects.thenbaexhibition.client"),
+    images: [
+      {
+        fileName: "1.png",
+        path: "works/thenbaexhibition",
+      },
+      {
+        fileName: "2.png",
+        path: "works/thenbaexhibition",
+      },
+      {
+        fileName: "3.png",
+        path: "works/thenbaexhibition",
+      },
+      {
+        fileName: "4.png",
+        path: "works/thenbaexhibition",
+      },
+    ],
+    url: "https://www.thenbaexhibition.com/",
+    sourceCode: null,
+  },
 ])
 </script>
 

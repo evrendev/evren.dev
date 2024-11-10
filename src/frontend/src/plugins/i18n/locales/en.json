@@ -81,6 +81,12 @@
           "client": "Turmepa",
           "category": "Web Development",
           "description": "For the Deniz Temiz Association (TURMEPA) website, designed to raise awareness about the Sustainable Development Goals and climate change and to provide access to reliable information, I implemented a fully responsive, device-compatible platform. The site features PDF documents that are securely stored and published online, along with video integration through YouTube, all managed through a user-friendly admin panel. Built with .NET Core Web API, JavaScript, SASS, and Docker, the platform ensures seamless management and access across various devices, supporting TURMEPA’s mission with both accessibility and reliability."
+        },
+        "thenbaexhibition": {
+          "title": "The NBA Exhibition",
+          "client": "Muse",
+          "category": "Web Development",
+          "description": "For The NBA Exhibition website, focusing on the lifestyle, culture, and history of the National Basketball Association, I transformed the complete Figma design—comprising all components and pages—into a single-page application. Built using JavaScript and SASS, the site brings the exhibition’s visual appeal to life with a smooth, engaging user experience. This streamlined design effectively captures the essence of the NBA, providing visitors with an immersive, cohesive digital experience that mirrors the exhibition’s dynamic content and storytelling."
         }
       }
     },
