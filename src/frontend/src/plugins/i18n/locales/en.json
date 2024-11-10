@@ -52,9 +52,9 @@
     },
     "works": {
       "meta": {
-        "title": "",
-        "description": "",
-        "keywords": ""
+        "title": "Works",
+        "description": "Discover the portfolio of Evren Yeniev, an experienced software developer specializing in ASP.NET, .NET Core, JavaScript, and Vue. Explore projects across various industries with a focus on clean code, responsive design, and innovative digital solutions.",
+        "keywords": "Evren Yeniev, software developer, portfolio, ASP.NET Core, .NET Core, JavaScript, Vue, web development, responsive design, digital solutions, frontend, backend development, professional portfolio, software projects, clean code."
       },
       "title": "Works",
       "info": {
@@ -92,9 +92,9 @@
     },
     "contact": {
       "meta": {
-        "title": "",
-        "description": "",
-        "keywords": ""
+        "title": "Contact",
+        "description": "Get in touch with Evren Yeniev, a professional software developer specializing in ASP.NET, .NET Core, and JavaScript. Reach out for inquiries, collaborations, or to learn more about his work and services.",
+        "keywords": "Contact Evren Yeniev, software developer contact, inquiries, collaboration, ASP.NET, .NET Core, JavaScript, web development contact, portfolio contact, software development."
       },
       "title": "Contact",
       "form": {

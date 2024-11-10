@@ -37,11 +37,64 @@
       "get-in-touch": "Kontakt aufnehmen",
       "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen."
     },
+    "about": {
+      "meta": {
+        "title": "Über mich",
+        "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen.",
+        "keywords": "Softwareentwickler, Webentwickler, Full-Stack-Entwickler, Webtechnologien, Webanwendungen, Websites, moderne Technologien"
+      },
+      "title": "Über mich",
+      "biography": {
+        "title": "Biografie",
+        "content": "Hallo, mein Name ist Evren Yeniev. Ich begann meine Karriere mit einem Schwerpunkt auf Server- und Netzwerksysteme und sammelte über 12 Jahre Erfahrung in diesem Bereich. Später führte mich mein Interesse an Programmierung zu einem Studium in Software Engineering, wodurch ich mich auf den Bereich der web-basierten Software konzentrierte, in dem ich nun seit 9 Jahren tätig bin. Im Backend arbeite ich hauptsächlich mit ASP.NET und ASP.NET Core zusammen mit MS SQL, während mein Frontend-Toolkit HTML5, CSS3, JavaScript, jQuery und Vue.js umfasst. Ich lege großen Wert darauf, sauberen und wartbaren Code zu schreiben und halte mich strikt an Designprinzipien, um sicherzustellen, dass meine Arbeit sowohl effizient als auch optisch ansprechend ist. Meine Leidenschaft liegt in der Entwicklung von responsiven, benutzerfreundlichen Webanwendungen, die modernen Standards für Funktionalität und Leistung entsprechen. Ob es darum geht, eine einfache Website oder eine komplexe Anwendung zu erstellen – ich strebe danach, innovative Ideen mit Präzision und Liebe zum Detail zum Leben zu erwecken.",
+        "download-cv": "Lebenslauf herunterladen"
+      }
+    },
+    "works": {
+      "meta": {
+        "title": "Projekte",
+        "description": "Entdecken Sie das Portfolio von Evren Yeniev, einem erfahrenen Softwareentwickler mit Schwerpunkt auf ASP.NET, .NET Core, JavaScript und Vue. Erfahren Sie mehr über Projekte in verschiedenen Branchen mit Fokus auf sauberen Code, responsives Design und innovative digitale Lösungen.",
+        "keywords": "Evren Yeniev, Softwareentwickler, Portfolio, ASP.NET Core, .NET Core, JavaScript, Vue, Webentwicklung, responsives Design, digitale Lösungen, Frontend, Backend-Entwicklung, professionelles Portfolio, Softwareprojekte, sauberer Code."
+      },
+      "title": "Projekte",
+      "info": {
+        "category": "Kategorie",
+        "technologies": "Technologien",
+        "client": "Kunde"
+      },
+      "some-projects": {
+        "title": "Einige Projekte",
+        "goztepe": {
+          "title": "Göztepe Sportverein",
+          "client": "Göztepe",
+          "category": "Webentwicklung",
+          "description": "Für die Website des Göztepe Sportvereins habe ich eine robuste und skalierbare Infrastruktur entwickelt, um sowohl die Website als auch die mobile Anwendung zu verwalten. Im Backend habe ich .NET Core Web API, Docker und MS SQL verwendet, um ein leistungsfähiges, sicheres und flexibles System zu gewährleisten. Das Frontend wurde mit Vue.js, SASS, TypeScript, Pinia, Docker und Jest erstellt, um ein responsives und interaktives Benutzererlebnis zu bieten. Diese Plattform ermöglicht eine nahtlose Verwaltung aller Sportabteilungen und Teams, einschließlich Athleten, Spiele und relevanter Tabellen oder Turnierergebnisse. Außerdem beinhaltet sie eine zugängliche Ticketorganisation für Fans mit Behinderungen sowie die Gestaltung aller interaktiven Umfragen und Formulare, was eine umfassende digitale Lösung für die Bedürfnisse des Vereins bietet."
+        },
+        "onarim": {
+          "title": "Onarim GmbH",
+          "client": "Onarim",
+          "category": "Webentwicklung",
+          "description": "Für die Website der Onarim GmbH, die Kunden in der Türkei und Deutschland betreut, habe ich eine vollständig responsive, mehrsprachige Plattform entwickelt, die mit allen Geräten kompatibel ist. Die Website wurde unter Verwendung von Figma für das Design aller Komponenten und Layouts sowie mit .NET Core Web API, Vue und SASS implementiert. Diese Kombination gewährleistet eine reibungslose Anpassung an verschiedene Bildschirmgrößen und bietet ein benutzerfreundliches Erlebnis. Das Ergebnis ist eine moderne, zweisprachige digitale Präsenz, die die internationale Reichweite und das Qualitätsbewusstsein von Onarim GmbH effektiv unterstützt."
+        },
+        "turmepa": {
+          "title": "Turmepa Web Akademie",
+          "client": "Turmepa",
+          "category": "Webentwicklung",
+          "description": "Für die Website der Deniz Temiz Association (TURMEPA), die das Bewusstsein für die Nachhaltigkeitsziele und den Klimawandel schärfen und den Zugang zu verlässlichen Informationen ermöglichen soll, habe ich eine vollständig responsive, gerätekompatible Plattform implementiert. Die Seite enthält PDF-Dokumente, die sicher gespeichert und online veröffentlicht werden, sowie eine Video-Integration über YouTube, die über ein benutzerfreundliches Admin-Panel verwaltet wird. Die Plattform wurde mit .NET Core Web API, JavaScript, SASS und Docker entwickelt und gewährleistet eine nahtlose Verwaltung und Nutzung auf verschiedenen Geräten, unterstützt TURMEPAs Mission mit sowohl Zugänglichkeit als auch Zuverlässigkeit."
+        },
+        "thenbaexhibition": {
+          "title": "The NBA Exhibition",
+          "client": "Muse",
+          "category": "Webentwicklung",
+          "description": "Für die Website The NBA Exhibition, die sich auf den Lifestyle, die Kultur und die Geschichte der National Basketball Association konzentriert, habe ich das vollständige Figma-Design – bestehend aus allen Komponenten und Seiten – in eine Single-Page-Anwendung umgewandelt. Die Seite wurde mit JavaScript und SASS erstellt und bringt die visuelle Attraktivität der Ausstellung mit einem reibungslosen, ansprechenden Benutzererlebnis zum Leben. Dieses schlanke Design fängt das Wesen der NBA effektiv ein und bietet den Besuchern ein immersives, kohärentes digitales Erlebnis, das die dynamischen Inhalte und die Erzählweise der Ausstellung widerspiegelt."
+        }
+      }
+    },
     "contact": {
       "meta": {
         "title": "Kontakt",
-        "description": "",
-        "keywords": ""
+        "description": "Kontaktieren Sie Evren Yeniev, einen professionellen Softwareentwickler mit Spezialisierung auf ASP.NET, .NET Core und JavaScript. Für Anfragen, Kooperationen oder weitere Informationen über seine Arbeit und Dienstleistungen.",
+        "keywords": "Kontakt Evren Yeniev, Softwareentwickler Kontakt, Anfragen, Kooperation, ASP.NET, .NET Core, JavaScript, Webentwicklung Kontakt, Portfolio Kontakt, Softwareentwicklung."
       },
       "title": "Kontakt",
       "form": {
@@ -87,19 +140,6 @@
       "phone": {
         "formatted": "+49 (176) 5823 3031",
         "plain": "+4917658233031"
-      }
-    },
-    "about": {
-      "meta": {
-        "title": "Über mich",
-        "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen.",
-        "keywords": "Softwareentwickler, Webentwickler, Full-Stack-Entwickler, Webtechnologien, Webanwendungen, Websites, moderne Technologien"
-      },
-      "title": "Über mich",
-      "biography": {
-        "title": "Biografie",
-        "content": "Hallo, mein Name ist Evren Yeniev. Ich begann meine Karriere mit einem Schwerpunkt auf Server- und Netzwerksysteme und sammelte über 12 Jahre Erfahrung in diesem Bereich. Später führte mich mein Interesse an Programmierung zu einem Studium in Software Engineering, wodurch ich mich auf den Bereich der web-basierten Software konzentrierte, in dem ich nun seit 9 Jahren tätig bin. Im Backend arbeite ich hauptsächlich mit ASP.NET und ASP.NET Core zusammen mit MS SQL, während mein Frontend-Toolkit HTML5, CSS3, JavaScript, jQuery und Vue.js umfasst. Ich lege großen Wert darauf, sauberen und wartbaren Code zu schreiben und halte mich strikt an Designprinzipien, um sicherzustellen, dass meine Arbeit sowohl effizient als auch optisch ansprechend ist. Meine Leidenschaft liegt in der Entwicklung von responsiven, benutzerfreundlichen Webanwendungen, die modernen Standards für Funktionalität und Leistung entsprechen. Ob es darum geht, eine einfache Website oder eine komplexe Anwendung zu erstellen – ich strebe danach, innovative Ideen mit Präzision und Liebe zum Detail zum Leben zu erwecken.",
-        "download-cv": "Lebenslauf herunterladen"
       }
     }
   }
