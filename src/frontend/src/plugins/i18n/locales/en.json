@@ -68,7 +68,13 @@
           "title": "Göztepe Sports Club",
           "client": "Göztepe",
           "category": "Web Development",
-          "description": "For the Göztepe Sports Club website, I developed a robust and scalable infrastructure to manage both the website and mobile application. On the backend, I utilized ASP.NET Core Web API, Docker, and MS SQL to ensure a powerful, secure, and flexible system. The frontend is built with Vue.js, SASS, TypeScript, Pinia, Docker, and Jest to deliver a responsive and interactive user experience. This platform allows seamless management of all sports departments and teams, covering athletes, matches, and related standings or tournament results. Additionally, it includes accessible ticket organization for disabled fans, as well as the design of all interactive surveys and forms, providing a comprehensive digital solution for the club’s needs."
+          "description": "For the Göztepe Sports Club website, I developed a robust and scalable infrastructure to manage both the website and mobile application. On the backend, I utilized .NET Core Web API, Docker, and MS SQL to ensure a powerful, secure, and flexible system. The frontend is built with Vue.js, SASS, TypeScript, Pinia, Docker, and Jest to deliver a responsive and interactive user experience. This platform allows seamless management of all sports departments and teams, covering athletes, matches, and related standings or tournament results. Additionally, it includes accessible ticket organization for disabled fans, as well as the design of all interactive surveys and forms, providing a comprehensive digital solution for the club’s needs."
+        },
+        "onarim": {
+          "title": "Onarim GmbH",
+          "client": "Onarim",
+          "category": "Web Development",
+          "description": "For the Onarim GmbH website, serving clients in Turkey and Germany, I designed and developed a fully responsive, multi-language platform compatible with all devices. Using Figma for all component and layout designs, I implemented the website with .NET Core Web API, Vue, and SASS technologies. This combination ensures seamless adaptability across various screen sizes and provides a smooth, user-friendly experience. The result is a modern, bilingual digital presence that effectively supports Onarim GmbH’s international reach and commitment to quality service."
         }
       }
     },

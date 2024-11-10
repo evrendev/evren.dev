@@ -12,7 +12,7 @@ const props = defineProps({
 <template>
   <div class="works-list">
     <ul class="work-items">
-      <li class="modalbox" v-for="work in props.works" :key="work">
+      <li v-for="work in props.works" :key="work">
         <work-item :work="work" />
       </li>
     </ul>
@@ -26,17 +26,14 @@ const props = defineProps({
   ul {
     &.work-items {
       position: relative;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 15px;
 
-      li {
-        width: 50%;
-
-        @media screen and (max-width: 768px) {
-          width: 100%;
-        }
+      @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(1, 1fr);
       }
     }
   }

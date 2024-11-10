@@ -11,7 +11,7 @@ const works = reactive([
     title: t("page.works.some-projects.goztepe.title"),
     category: t("page.works.some-projects.goztepe.category"),
     description: t("page.works.some-projects.goztepe.description"),
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: [".Net Core WebAPI", "Jquery", "SASS", "Bootstrap"],
     client: t("page.works.some-projects.goztepe.client"),
     images: [
       {
@@ -32,6 +32,33 @@ const works = reactive([
       },
     ],
     url: "https://www.goztepe.org.tr/",
+    sourceCode: null,
+  },
+  {
+    title: t("page.works.some-projects.onarim.title"),
+    category: t("page.works.some-projects.onarim.category"),
+    description: t("page.works.some-projects.onarim.description"),
+    technologies: ["ASP Core WebAPI", "VueJS", "SASS", "Figma"],
+    client: t("page.works.some-projects.onarim.client"),
+    images: [
+      {
+        fileName: "1.png",
+        path: "works/onarim",
+      },
+      {
+        fileName: "2.png",
+        path: "works/onarim",
+      },
+      {
+        fileName: "3.png",
+        path: "works/onarim",
+      },
+      {
+        fileName: "4.png",
+        path: "works/onarim",
+      },
+    ],
+    url: "https://onar.im/",
     sourceCode: null,
   },
 ])
