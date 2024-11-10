@@ -63,6 +63,14 @@ onClickOutside(target, () => emit("modal-close"))
                   />
                   <span v-text="props.work.technologies.join(', ')" />
                 </li>
+                <li>
+                  <span class="first">URL</span>
+                  <a
+                    :href="props.work.url"
+                    v-text="props.work.url"
+                    target="_blank"
+                  />
+                </li>
               </ul>
             </div>
           </div>
@@ -296,6 +304,18 @@ onClickOutside(target, () => emit("modal-close"))
               .first {
                 font-weight: 600;
                 display: block;
+              }
+
+              a {
+                display: inline-block;
+                color: var(--bc);
+
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                -o-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                font-style: italic;
               }
             }
           }

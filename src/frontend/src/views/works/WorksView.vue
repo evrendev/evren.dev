@@ -61,6 +61,33 @@ const works = reactive([
     url: "https://onar.im/",
     sourceCode: null,
   },
+  {
+    title: t("page.works.some-projects.turmepa.title"),
+    category: t("page.works.some-projects.turmepa.category"),
+    description: t("page.works.some-projects.turmepa.description"),
+    technologies: ["ASP Core WebAPI", "VueJS", "SASS", "Figma"],
+    client: t("page.works.some-projects.turmepa.client"),
+    images: [
+      {
+        fileName: "1.png",
+        path: "works/turmepa",
+      },
+      {
+        fileName: "2.png",
+        path: "works/turmepa",
+      },
+      {
+        fileName: "3.png",
+        path: "works/turmepa",
+      },
+      {
+        fileName: "4.png",
+        path: "works/turmepa",
+      },
+    ],
+    url: "https://akademi.turmepa.org.tr/",
+    sourceCode: null,
+  },
 ])
 </script>
 

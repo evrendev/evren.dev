@@ -75,6 +75,12 @@
           "client": "Onarim",
           "category": "Web Development",
           "description": "For the Onarim GmbH website, serving clients in Turkey and Germany, I designed and developed a fully responsive, multi-language platform compatible with all devices. Using Figma for all component and layout designs, I implemented the website with .NET Core Web API, Vue, and SASS technologies. This combination ensures seamless adaptability across various screen sizes and provides a smooth, user-friendly experience. The result is a modern, bilingual digital presence that effectively supports Onarim GmbH’s international reach and commitment to quality service."
+        },
+        "turmepa": {
+          "title": "Turmepa Web Akademi",
+          "client": "Turmepa",
+          "category": "Web Development",
+          "description": "For the Deniz Temiz Association (TURMEPA) website, designed to raise awareness about the Sustainable Development Goals and climate change and to provide access to reliable information, I implemented a fully responsive, device-compatible platform. The site features PDF documents that are securely stored and published online, along with video integration through YouTube, all managed through a user-friendly admin panel. Built with .NET Core Web API, JavaScript, SASS, and Docker, the platform ensures seamless management and access across various devices, supporting TURMEPA’s mission with both accessibility and reliability."
         }
       }
     },
