@@ -29,7 +29,7 @@ const { t } = useI18n()
             <p v-text="t('page.home.description')" />
           </div>
           <div class="page-button">
-            <router-link :to="{ name: 'contact' }" class="text_effect"
+            <router-link :to="{ name: 'contact' }" class="text-effect"
               ><span class="wrapper">
                 <span class="before">{{ t("page.home.get-in-touch") }}</span
                 ><span class="after">{{

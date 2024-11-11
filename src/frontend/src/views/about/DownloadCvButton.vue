@@ -26,7 +26,7 @@ const pdfFileSrc = new URL(
 
 <template>
   <div class="page-button">
-    <a :href="pdfFileSrc" class="text_effect" data-fancybox
+    <a :href="pdfFileSrc" class="text-effect" data-fancybox
       ><span class="wrapper">
         <span class="before">{{ t("page.about.biography.download-cv") }}</span
         ><span class="after">{{

@@ -1,4 +1,4 @@
-.line_effect {
+.line-effect {
   text-decoration: none;
   color: currentColor;
   display: inline-block;
@@ -23,30 +23,7 @@
   }
 }
 
-.text_hover_effect {
-  position: relative;
-  display: inline;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  background-size: 0% 1px;
-  transition: background-size 0.5s;
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-  }
-
-  &:hover {
-    background-size: 100% 1px;
-  }
-}
-
-.text_effect {
+.text-effect {
   span {
     display: block;
 
@@ -79,14 +56,6 @@
       transform: translateY(0);
     }
   }
-}
-
-.page_full_link {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
 }
 
 .page_borders {
@@ -128,36 +97,6 @@
 
   @media (max-width: 1024px) {
     display: none;
-  }
-}
-
-.page_flexbox {
-  width: 100%;
-  display: flex;
-
-  @media (max-width: 1040px) {
-    flex-direction: column;
-  }
-
-  .leftbox {
-    width: 50%;
-    padding-right: 50px;
-
-    @media (max-width: 1040px) {
-      width: 100%;
-      padding-right: 0px;
-      margin-bottom: 100px;
-    }
-  }
-
-  .rightbox {
-    width: 50%;
-    padding-left: 50px;
-
-    @media (max-width: 1040px) {
-      width: 100%;
-      padding-left: 0px;
-    }
   }
 }
 

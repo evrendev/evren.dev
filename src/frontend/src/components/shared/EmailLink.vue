@@ -10,7 +10,7 @@ const { t } = useI18n()
       <a
         href="#"
         rel="nofollow"
-        class="line_effect"
+        class="line-effect"
         :onclick="`this.href='mailto:${t('page.contact.email.initial')}@${t(
           'page.contact.email.domain',
         )}'`"

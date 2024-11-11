@@ -192,7 +192,7 @@ const onInvalidSubmit = ({ errors }) => {
         <button
           type="submit"
           id="send_message"
-          class="text_effect"
+          class="text-effect"
           href="#"
           :disabled="isSubmitting"
         >
