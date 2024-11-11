@@ -1,7 +1,7 @@
 <template>
   <div class="logo">
     <router-link :to="{ name: 'home' }">
-      <h3>EVREN</h3>
+      <h3>{EVREN}</h3>
     </router-link>
   </div>
 </template>
