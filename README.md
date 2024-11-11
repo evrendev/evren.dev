@@ -27,25 +27,25 @@ src/
 		Secret.json
 		SendMailApi.csproj
 	frontend/
-        .editorconfig
-        .env
-        .env.development
-        .gitignore
-        .prettierrc.json
-        eslint.config.js
-        vite.config.js
-        package.json
-        src/
-            assets/
-            components/
-            plugins/
-                i18n/
-                    locales/
-            router/
-            store/
-            views/
-            App.vue
-            main.js
+      .editorconfig
+      .env
+      .env.development
+      .gitignore
+      .prettierrc.json
+      eslint.config.js
+      vite.config.js
+      package.json
+      src/
+         assets/
+         components/
+         plugins/
+               i18n/
+                  locales/
+         router/
+         store/
+         views/
+         App.vue
+         main.js
 ```
 
 ## Technologies Used
