@@ -23,7 +23,11 @@ const closeModal = () => {
 
 <template>
   <article class="work-item">
-    <preview-image :image="props.work.images[0]" :title="props.work.title" />
+    <preview-image
+      :image="props.work.images[0]"
+      :title="props.work.title"
+      @click.prevent="openModal"
+    />
 
     <work-details
       :category="props.work.category"
