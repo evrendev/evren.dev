@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue"
 import { defineProps } from "vue"
-import { WorkImages, WorkDetails, ModalBox } from "."
+import { PreviewImage, WorkDetails, ModalBox } from "."
 
 const props = defineProps({
   work: {
@@ -23,7 +23,7 @@ const closeModal = () => {
 
 <template>
   <article class="work-item">
-    <work-images :images="props.work.images" :title="props.work.title" />
+    <preview-image :image="props.work.images[0]" :title="props.work.title" />
 
     <work-details
       :category="props.work.category"

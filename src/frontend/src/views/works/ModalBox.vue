@@ -1,7 +1,9 @@
 <script setup>
+import "vue3-carousel/dist/carousel.css"
 import { defineProps, defineEmits, ref } from "vue"
 import { useI18n } from "vue-i18n"
 import { onClickOutside } from "@vueuse/core"
+import { Carousel, Slide, Navigation } from "vue3-carousel"
 import { SvgIcon, DynamicImage } from "@/components/shared"
 
 const { t } = useI18n()
@@ -30,13 +32,23 @@ onClickOutside(target, () => emit("modal-close"))
           </a>
         </div>
         <div class="modal-body">
-          <div class="banner">
-            <dynamic-image
-              class="course-image"
-              :file-name="props.work.images[0].fileName"
-              :path="props.work.images[0].path"
-              :alt="props.work.title"
-            />
+          <div class="carousel-wrapper">
+            <carousel>
+              <template #slides>
+                <slide v-for="image in props.work.images" :key="image">
+                  <dynamic-image
+                    class="course-image"
+                    :file-name="image.fileName"
+                    :path="image.path"
+                    :alt="props.title"
+                  />
+                </slide>
+              </template>
+
+              <template #addons>
+                <navigation />
+              </template>
+            </carousel>
           </div>
           <div class="details">
             <h3 v-text="props.work.title" />
@@ -73,19 +85,6 @@ onClickOutside(target, () => emit("modal-close"))
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="images">
-            <ul>
-              <li v-for="image in props.work.images.slice(1)" :key="image">
-                <div class="inner">
-                  <dynamic-image
-                    :file-name="image.fileName"
-                    :path="image.path"
-                    :alt="props.work.title"
-                  />
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -225,7 +224,7 @@ onClickOutside(target, () => emit("modal-close"))
         }
       }
 
-      .banner {
+      .carousel-wrapper {
         position: relative;
         overflow: hidden;
         margin-bottom: 30px;
@@ -233,6 +232,30 @@ onClickOutside(target, () => emit("modal-close"))
         img {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           border-radius: 5px;
+        }
+
+        button {
+          &.carousel {
+            &__prev,
+            &__next {
+              background-color: rgba(0, 0, 0, 0.5);
+              border: none;
+              border-radius: 50%;
+              color: white;
+              font-size: 1.5rem;
+              height: 40px;
+              line-height: 40px;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 40px;
+              z-index: 2;
+
+              &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+              }
+            }
+          }
         }
       }
 
@@ -317,40 +340,6 @@ onClickOutside(target, () => emit("modal-close"))
                 transition: all 0.3s ease;
                 font-style: italic;
               }
-            }
-          }
-        }
-      }
-
-      .images {
-        width: 100%;
-        height: auto;
-
-        ul {
-          list-style-type: none;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: auto;
-          column-gap: 30px;
-          row-gap: 60px;
-
-          @media screen and (max-width: 768px) {
-            grid-template-columns: repeat(1, 1fr);
-            column-gap: unset;
-          }
-
-          li {
-            &:first-child {
-              grid-column: span 2;
-
-              @media screen and (max-width: 768px) {
-                grid-column: 1;
-              }
-            }
-
-            img {
-              box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-              border-radius: 5px;
             }
           }
         }
