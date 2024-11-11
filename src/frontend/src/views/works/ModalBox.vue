@@ -52,9 +52,6 @@ onClickOutside(target, () => emit("modal-close"))
           </div>
           <div class="details">
             <h3 v-text="props.work.title" />
-            <span>
-              <a href="#" v-text="props.work.category" />
-            </span>
           </div>
           <div class="main">
             <div class="textbox" v-html="props.work.description" />
@@ -80,6 +77,17 @@ onClickOutside(target, () => emit("modal-close"))
                   <a
                     :href="props.work.url"
                     v-text="props.work.url"
+                    target="_blank"
+                  />
+                </li>
+                <li v-if="props.work.sourceCode">
+                  <span
+                    class="first"
+                    v-text="t('page.works.info.source-code')"
+                  />
+                  <a
+                    :href="props.work.sourceCode"
+                    v-text="props.work.sourceCode"
                     target="_blank"
                   />
                 </li>
@@ -232,30 +240,6 @@ onClickOutside(target, () => emit("modal-close"))
         img {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
           border-radius: 5px;
-        }
-
-        button {
-          &.carousel {
-            &__prev,
-            &__next {
-              background-color: rgba(0, 0, 0, 0.5);
-              border: none;
-              border-radius: 50%;
-              color: white;
-              font-size: 1.5rem;
-              height: 40px;
-              line-height: 40px;
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              width: 40px;
-              z-index: 2;
-
-              &:hover {
-                background-color: rgba(0, 0, 0, 0.8);
-              }
-            }
-          }
         }
       }
 
