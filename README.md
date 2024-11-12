@@ -5,47 +5,169 @@ Evren.Dev is a full-stack web application with a Vue.js frontend and an ASP.NET 
 ## Project Structure
 
 ```
-.editorconfig
-.github/
-	workflows/
-		deploy.yml
-.gitignore
-.secrets
-CNAME
-evren.dev.sln
-src/
-	backend/
-		appsettings.Development.json
-		appsettings.json
-		Extensions/
-		Localization/
-		Middleware/
-		Model/
-		Program.cs
-		Properties/
-		Resources/
-		Secret.json
-		SendMailApi.csproj
-	frontend/
-      .editorconfig
-      .env
-      .env.development
-      .gitignore
-      .prettierrc.json
-      eslint.config.js
-      vite.config.js
-      package.json
-      src/
-         assets/
-         components/
-         plugins/
-               i18n/
-                  locales/
-         router/
-         store/
-         views/
-         App.vue
-         main.js
+📦evren.dev
+ ┣ 📂.github
+ ┃ ┗ 📂workflows
+ ┃ ┃ ┗ 📜deploy.yml
+ ┣ 📂src
+ ┃ ┣ 📂backend
+ ┃ ┃ ┣ 📂Extensions
+ ┃ ┃ ┃ ┣ 📜LanguageRouteConstraint.cs
+ ┃ ┃ ┃ ┣ 📜ReCaptcha.cs
+ ┃ ┃ ┃ ┗ 📜RouteDataRequestCultureProvider.cs
+ ┃ ┃ ┣ 📂Localization
+ ┃ ┃ ┃ ┣ 📜JsonStringLocalizer.Factory.cs
+ ┃ ┃ ┃ ┗ 📜JsonStringLocalizer.cs
+ ┃ ┃ ┣ 📂Middleware
+ ┃ ┃ ┃ ┗ 📜LocalizationMiddleware.cs
+ ┃ ┃ ┣ 📂Model
+ ┃ ┃ ┃ ┣ 📜AhaSendRequest.cs
+ ┃ ┃ ┃ ┣ 📜AhaSendResponse.cs
+ ┃ ┃ ┃ ┣ 📜FormRequest.cs
+ ┃ ┃ ┃ ┗ 📜JsonResponse.cs
+ ┃ ┃ ┣ 📂Properties
+ ┃ ┃ ┃ ┗ 📜launchSettings.json
+ ┃ ┃ ┣ 📂Resources
+ ┃ ┃ ┃ ┣ 📜de.json
+ ┃ ┃ ┃ ┗ 📜en.json
+ ┃ ┃ ┣ 📜Program.cs
+ ┃ ┃ ┣ 📜Secret.json
+ ┃ ┃ ┣ 📜SendMailApi.csproj
+ ┃ ┃ ┣ 📜appsettings.Development.json
+ ┃ ┃ ┗ 📜appsettings.json
+ ┃ ┣ 📂frontend
+ ┃ ┃ ┣ 📂public
+ ┃ ┃ ┃ ┗ 📜favicon.svg
+ ┃ ┃ ┣ 📂src
+ ┃ ┃ ┃ ┣ 📂assets
+ ┃ ┃ ┃ ┃ ┣ 📂css
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜_base.scss
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜_fonts.scss
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜_reset.scss
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜_utilities.scss
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜main.scss
+ ┃ ┃ ┃ ┃ ┣ 📂documents
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜Evren_Yeniev_CV.pdf
+ ┃ ┃ ┃ ┃ ┣ 📂icons
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜github.svg
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜icon-error.svg
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜leetcode.svg
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜linkedin.svg
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜times.svg
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜twitter.svg
+ ┃ ┃ ┃ ┃ ┣ 📂images
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂about-me
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜evren-yeniev.webp
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂works
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂goztepe
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜1.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜2.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜3.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜4.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂onarim
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜1.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜2.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜3.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜4.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂thenbaexhibition
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜1.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜2.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜3.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜4.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂turmepa
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜1.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜2.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜3.png
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜4.png
+ ┃ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┃ ┣ 📂footer
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜PageFooter.vue
+ ┃ ┃ ┃ ┃ ┣ 📂header
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂desktop
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜DesktopHeader.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂mobile
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MobileHeader.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MobileMenu.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MobileMenuButton.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜MobileTopbar.vue
+ ┃ ┃ ┃ ┃ ┃ ┗ 📂shared
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LocaleSwitcher.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MenuItems.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜TextLogo.vue
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┃ ┃ ┣ 📂layout
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜PageBorders.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜PageContent.vue
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜PreLoader.vue
+ ┃ ┃ ┃ ┃ ┣ 📂shared
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DynamicImage.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜EmailLink.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜PageTitle.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SocialMediaAccounts.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜SvgIcon.vue
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┃ ┣ 📂plugins
+ ┃ ┃ ┃ ┃ ┣ 📂i18n
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂locales
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜de.json
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜en.json
+ ┃ ┃ ┃ ┃ ┃ ┣ 📂rules
+ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜datetimes.js
+ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜numbers.js
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜translation.js
+ ┃ ┃ ┃ ┃ ┣ 📜axios.js
+ ┃ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┃ ┗ 📜pinia.js
+ ┃ ┃ ┃ ┣ 📂router
+ ┃ ┃ ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┃ ┣ 📂stores
+ ┃ ┃ ┃ ┃ ┣ 📜app.store.js
+ ┃ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┃ ┗ 📜mail.store.js
+ ┃ ┃ ┃ ┣ 📂views
+ ┃ ┃ ┃ ┃ ┣ 📂about
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜AboutView.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜BiographyContent.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜DownloadCvButton.vue
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┃ ┃ ┣ 📂contact
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ContactForm.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ContactView.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜InfoList.vue
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┃ ┃ ┣ 📂home
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜HomeView.vue
+ ┃ ┃ ┃ ┃ ┗ 📂works
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜ModalBox.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜PreviewImage.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜WorkDetails.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜WorkItem.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜WorksList.vue
+ ┃ ┃ ┃ ┃ ┃ ┣ 📜WorksView.vue
+ ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┃ ┣ 📜App.vue
+ ┃ ┃ ┃ ┗ 📜main.js
+ ┃ ┃ ┣ 📜.editorconfig
+ ┃ ┃ ┣ 📜.env
+ ┃ ┃ ┣ 📜.env.development
+ ┃ ┃ ┣ 📜.gitignore
+ ┃ ┃ ┣ 📜.prettierrc.json
+ ┃ ┃ ┣ 📜README.md
+ ┃ ┃ ┣ 📜eslint.config.js
+ ┃ ┃ ┣ 📜index.html
+ ┃ ┃ ┣ 📜jsconfig.json
+ ┃ ┃ ┣ 📜package-lock.json
+ ┃ ┃ ┣ 📜package.json
+ ┃ ┃ ┣ 📜vite.config.js
+ ┃ ┃ ┗ 📜vitest.config.js
+ ┣ 📜.editorconfig
+ ┣ 📜.gitignore
+ ┣ 📜.secrets
+ ┣ 📜CNAME
+ ┣ 📜README.md
+ ┗ 📜evren.dev.sln
 ```
 
 ## Technologies Used
