@@ -30,17 +30,17 @@
     "home": {
       "meta": {
         "title": "Home",
-        "description": "I'm a software developer with a passion for web technologies. I'm currently working as a full-stack developer at a startup in Germany. I love to build web applications and websites with modern technologies.",
+        "description": "I'm a Fullstack Developer with over 20 years in the IT industry, specializing in building custom web applications and digital solutions. My focus is on helping businesses and organizations improve their efficiency by automating complex processes. I bring ideas to life using modern technologies, primarily working with the .NET ecosystem and Vue.js",
         "keywords": "software developer, web developer, full-stack developer, web technologies, web applications, websites, modern technologies"
       },
       "title": "Home",
       "get-in-touch": "Get In Touch",
-      "description": "I'm a software developer with a passion for web technologies. I'm currently working as a full-stack developer at a startup in Germany. I love to build web applications and websites with modern technologies."
+      "description": "I'm a Fullstack Developer with over 20 years in the IT industry, specializing in building custom web applications and digital solutions. My focus is on helping businesses and organizations improve their efficiency by automating complex processes. I bring ideas to life using modern technologies, primarily working with the .NET ecosystem and Vue.js"
     },
     "about": {
       "meta": {
         "title": "About Me",
-        "description": "I'm a software developer with a passion for web technologies. I'm currently working as a full-stack developer at a startup in Germany. I love to build web applications and websites with modern technologies.",
+        "description": "My career in technology began in system and network administration, where I built a strong foundation in IT infrastructure over seven years. Driven by a passion for creating solutions, I transitioned my focus to software development. For over a decade, I've operated as a freelance developer and IT consultant, collaborating with diverse organizations like sports clubs and non-profits. I specialize in transforming complex business requirements into efficient, end-to-end digital solutions—from comprehensive e-learning platforms to automated systems that replace entire manual workflows. Technically, I am proficient in backend development with C# / .NET and both MS SQL and PostgreSQL , while on the frontend, I excel with modern frameworks like Vue.js and TypeScript. I am dedicated to building user-centric, maintainable applications and enjoy taking innovative ideas from concept to launch.",
         "keywords": "software developer, web developer, full-stack developer, web technologies, web applications, websites, modern technologies"
       },
       "title": "About Me",

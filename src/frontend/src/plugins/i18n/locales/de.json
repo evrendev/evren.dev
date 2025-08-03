@@ -30,17 +30,17 @@
     "home": {
       "meta": {
         "title": "Startseite",
-        "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen.",
+        "description": "Ich bin ein Fullstack Developer mit über 20 Jahren Erfahrung in der IT-Branche und spezialisiert auf die Entwicklung maßgeschneiderter Webanwendungen und digitaler Lösungen. Mein Fokus liegt darauf, Unternehmen und Organisationen dabei zu helfen, ihre Effizienz durch die Automatisierung komplexer Prozesse zu steigern. Ich erwecke Ideen mit modernen Technologien zum Leben und arbeite dabei hauptsächlich mit dem .NET-Ökosystem und Vue.js.",
         "keywords": "Softwareentwickler, Webentwickler, Full-Stack-Entwickler, Webtechnologien, Webanwendungen, Websites, moderne Technologien"
       },
       "title": "Startseite",
       "get-in-touch": "Kontakt aufnehmen",
-      "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen."
+      "description": "Ich bin ein Fullstack Developer mit über 20 Jahren Erfahrung in der IT-Branche und spezialisiert auf die Entwicklung maßgeschneiderter Webanwendungen und digitaler Lösungen. Mein Fokus liegt darauf, Unternehmen und Organisationen dabei zu helfen, ihre Effizienz durch die Automatisierung komplexer Prozesse zu steigern. Ich erwecke Ideen mit modernen Technologien zum Leben und arbeite dabei hauptsächlich mit dem .NET-Ökosystem und Vue.js."
     },
     "about": {
       "meta": {
         "title": "Über mich",
-        "description": "Ich bin ein Softwareentwickler mit einer Leidenschaft für Webtechnologien. Derzeit arbeite ich als Full-Stack-Entwickler in einem Startup in Deutschland. Ich liebe es, Webanwendungen und Websites mit modernen Technologien zu erstellen.",
+        "description": "Meine Karriere in der Technologie begann in der System- und Netzwerkadministration, wo ich über sieben Jahre lang ein starkes Fundament in der IT-Infrastruktur aufgebaut habe. Angetrieben von der Leidenschaft, Lösungen zu entwickeln, verlagerte ich meinen Schwerpunkt auf die Softwareentwicklung. Seit über einem Jahrzehnt bin ich als freiberuflicher Entwickler und IT-Berater tätig und arbeite mit vielfältigen Organisationen wie Sportvereinen und gemeinnützigen Organisationen zusammen. Ich bin darauf spezialisiert, komplexe Geschäftsanforderungen in effiziente, durchgängige digitale Lösungen umzuwandeln – von umfassenden E-Learning-Plattformen bis hin zu automatisierten Systemen, die ganze manuelle Arbeitsabläufe ersetzen. Technisch beherrsche ich die Backend-Entwicklung mit C# / .NET und sowohl MS SQL als auch PostgreSQL, während ich im Frontend mit modernen Frameworks wie Vue.js und TypeScript glänze. Ich widme mich der Entwicklung benutzerorientierter und wartbarer Anwendungen und habe Freude daran, innovative Ideen vom Konzept bis zur finalen Umsetzung zu begleiten.",
         "keywords": "Softwareentwickler, Webentwickler, Full-Stack-Entwickler, Webtechnologien, Webanwendungen, Websites, moderne Technologien"
       },
       "title": "Über mich",
