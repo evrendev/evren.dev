@@ -6,7 +6,7 @@ import HomeView from "@/views/home/HomeView.vue"
 const DEFAULT_TITLE = "evren.dev"
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory("/"), // Explicit base URL
   linkActiveClass: "active",
   linkExactActiveClass: "exact-active",
   routes: [

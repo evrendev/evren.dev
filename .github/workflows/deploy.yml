@@ -26,6 +26,17 @@ jobs:
       - name: Build frontend
         working-directory: src/frontend
         run: npm run build
+        env:
+          NODE_ENV: production
+          VITE_BASE_URL: "/"
+
+      - name: Check build output
+        working-directory: src/frontend
+        run: |
+          echo "Build completed. Checking dist folder..."
+          ls -la dist/
+          echo "Checking index.html content..."
+          head -20 dist/index.html
 
       - name: Deploy to FTP (Frontend)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5

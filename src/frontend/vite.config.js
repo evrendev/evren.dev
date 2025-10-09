@@ -9,14 +9,19 @@ import vueDevTools from "vite-plugin-vue-devtools"
 import viteImagemin from "vite-plugin-imagemin"
 
 // https://vite.dev/config/
-export default defineConfig({
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: "modern-compiler",
+export default defineConfig(({ mode }) => {
+  // Production için base URL'i açıkça set edelim
+  const base = mode === 'production' ? '/' : '/'
+  
+  return {
+    base, // Explicit base URL
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+        },
       },
     },
-  },
   plugins: [
     vue(),
     vueDevTools(),
@@ -79,5 +84,5 @@ export default defineConfig({
     sourcemap: false,
     target: "esnext",
   },
-  base: "/",
+  }
 })
