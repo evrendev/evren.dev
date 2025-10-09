@@ -18,16 +18,9 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Create package-lock.json if not exists
-        working-directory: src/frontend
-        run: |
-          if [ ! -f package-lock.json ]; then
-            npm install --package-lock-only
-          fi
-
       - name: Install dependencies
         working-directory: src/frontend
-        run: npm ci
+        run: npm install
 
       - name: Build frontend
         working-directory: src/frontend
