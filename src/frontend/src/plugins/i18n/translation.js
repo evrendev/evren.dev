@@ -6,12 +6,14 @@ const Trans = {
     return (
       localStorage.getItem("lang") ||
       navigator.language.slice(0, 2) ||
-      import.meta.env.VITE_DEFAULT_LOCALE
+      import.meta.env.VITE_DEFAULT_LOCALE ||
+      "en"
     )
   },
 
   get supportedLocales() {
-    return import.meta.env.VITE_SUPPORTED_LOCALES.split(",")
+    const locales = import.meta.env.VITE_SUPPORTED_LOCALES
+    return locales ? locales.split(",") : ["de", "en"]
   },
 
   get currentLocale() {

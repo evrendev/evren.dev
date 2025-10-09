@@ -29,6 +29,16 @@ jobs:
         env:
           NODE_ENV: production
           VITE_BASE_URL: "/"
+          VITE_API_URL: "https://api.evren.dev/"
+          VITE_SITE_URL: "https://evren.dev"
+          VITE_DEFAULT_LOCALE: "en"
+          VITE_FALLBACK_LOCALE: "en"
+          VITE_SUPPORTED_LOCALES: "de,en"
+          VITE_RECAPTCHA_SITE_KEY_V2: ${{ secrets.VITE_RECAPTCHA_SITE_KEY_V2 }}
+          VITE_RECAPTCHA_SITE_KEY_V3: ${{ secrets.VITE_RECAPTCHA_SITE_KEY_V3 }}
+          VITE_RECAPTCHA_SECRET_KEY_V2: ${{ secrets.VITE_RECAPTCHA_SECRET_KEY_V2 }}
+          VITE_RECAPTCHA_SECRET_KEY_V3: ${{ secrets.VITE_RECAPTCHA_SECRET_KEY_V3 }}
+          VITE_AHASEND_APIKEY: ${{ secrets.VITE_AHASEND_APIKEY }}
 
       - name: Check build output
         working-directory: src/frontend
