@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted, onErrorCaptured } from 'vue'
 import {
   Preloader,
   PageBorders,
@@ -7,6 +8,16 @@ import {
   PageContent,
   PageFooter,
 } from "./components"
+
+onMounted(() => {
+  console.log("📱 App.vue mounted successfully!")
+})
+
+onErrorCaptured((error, instance, errorInfo) => {
+  console.error("❌ App Error Captured:", error)
+  console.error("📍 Error Info:", errorInfo)
+  return false // Propagate error
+})
 </script>
 
 <template>

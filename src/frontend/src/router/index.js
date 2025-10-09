@@ -134,4 +134,15 @@ router.afterEach(to => {
   metaKeywordsTag.setAttribute("content", keywords)
 })
 
+// Debug ve Error Handling
+router.beforeEach((to, from, next) => {
+  console.log("🧭 Navigating to:", to.path)
+  console.log("🌐 Locale:", to.params.locale)
+  next()
+})
+
+router.onError((error) => {
+  console.error("❌ Router Error:", error)
+})
+
 export default router

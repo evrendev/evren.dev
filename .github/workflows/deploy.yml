@@ -36,7 +36,11 @@ jobs:
           echo "Build completed. Checking dist folder..."
           ls -la dist/
           echo "Checking index.html content..."
-          head -20 dist/index.html
+          head -30 dist/index.html
+          echo "Checking JavaScript files..."
+          find dist -name "*.js" -type f | head -5
+          echo "Checking CSS files..."
+          find dist -name "*.css" -type f | head -5
 
       - name: Deploy to FTP (Frontend)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
