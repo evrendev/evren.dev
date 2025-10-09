@@ -14,7 +14,12 @@ const mailStore = useMailStore()
 const appStore = useAppStore()
 
 const siteKey = computed(() => {
-  return import.meta.env.VITE_RECAPTCHA_SITE_KEY_V2
+  const key = import.meta.env.VITE_RECAPTCHA_SITE_KEY_V2
+  if (!key) {
+    console.error("ReCAPTCHA site key is not configured")
+    return null
+  }
+  return key
 })
 
 const handleCaptchaVerify = response => {
@@ -176,7 +181,7 @@ const onInvalidSubmit = ({ errors }) => {
           <error-message name="message" as="div" class="has-error" />
         </li>
       </ul>
-      <div class="page-captcha">
+      <div class="page-captcha" v-if="siteKey">
         <vue-recaptcha
           ref="googleRecaptcha"
           :language="locale"
@@ -187,6 +192,11 @@ const onInvalidSubmit = ({ errors }) => {
           @error="handleCaptchaError"
           @expired="handleCaptchaExpired"
         ></vue-recaptcha>
+      </div>
+      <div v-else class="page-captcha-error">
+        <p style="color: red">
+          ReCAPTCHA configuration error. Please contact administrator.
+        </p>
       </div>
       <div class="page-button">
         <button
