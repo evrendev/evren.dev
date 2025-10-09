@@ -36,7 +36,7 @@ const config = {
   port: env.FTP_PORT || process.env.FTP_PORT || 21,
   localRoot: path.join(__dirname, "..", "dist"),
   remoteRoot:
-    env.FTP_REMOTE_ROOT || process.env.FTP_REMOTE_ROOT || "/public_html/",
+    env.FTP_REMOTE_ROOT || process.env.FTP_REMOTE_ROOT || "/httpdocs/",
   include: ["*", "**/*"],
   exclude: [
     "dist/**/*.map",

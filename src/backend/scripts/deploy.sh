@@ -28,7 +28,7 @@ echo "📁 FTP ile yükleme başlıyor..."
 FTP_HOST=${FTP_HOST_API:-"api.evren.dev"}
 FTP_USER=${FTP_USER_API}
 FTP_PASSWORD=${FTP_PASSWORD_API}
-FTP_REMOTE_DIR=${FTP_REMOTE_DIR_API:-"/public_html/"}
+FTP_REMOTE_DIR=${FTP_REMOTE_DIR_API:-"/httpdocs/"}
 
 if [ -z "$FTP_USER" ] || [ -z "$FTP_PASSWORD" ]; then
     echo "❌ FTP bilgileri eksik. .env.deploy dosyasını kontrol edin."
