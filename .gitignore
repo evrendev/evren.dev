@@ -266,5 +266,9 @@ package-lock.json
 Secret.json
 .secrets
 
+# Deployment config files
+.env.deploy
+**/.env.deploy
+
 # VS Code files for those working on multiple tools
 .vscode/
