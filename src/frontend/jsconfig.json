@@ -3,6 +3,7 @@
     "target": "es6",
     "allowJs": true,
     "module": "commonjs",
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
