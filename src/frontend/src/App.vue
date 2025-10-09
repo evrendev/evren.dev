@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, onErrorCaptured } from 'vue'
+import { onMounted, onErrorCaptured } from "vue"
 import {
   Preloader,
   PageBorders,

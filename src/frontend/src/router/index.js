@@ -141,7 +141,7 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
-router.onError((error) => {
+router.onError(error => {
   console.error("❌ Router Error:", error)
 })
 
