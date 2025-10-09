@@ -77,6 +77,21 @@ jobs:
         working-directory: src/backend
         run: dotnet publish -c Release -o publish --no-build
 
+      - name: Create production Secret.json
+        working-directory: src/backend/publish
+        run: |
+          cat > Secret.json << EOF
+          {
+            "Google": {
+              "Recaptcha.SecretKey": "${{ secrets.VITE_RECAPTCHA_SECRET_KEY_V2 }}"
+            },
+            "Ahasend": {
+              "ApiUrl": "https://api.ahasend.com/v1/email/send",
+              "Apikey": "${{ secrets.VITE_AHASEND_APIKEY }}"
+            }
+          }
+          EOF
+
       - name: Deploy to FTP (Backend)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
