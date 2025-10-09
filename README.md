@@ -1,320 +1,77 @@
-# Evren.Dev
+# 👋 Evren.Dev - Personal Website
 
-Evren.Dev is a full-stack web application with a Vue.js frontend and an ASP.NET Core backend. This project includes features such as localization, form validation, and automated deployment. It is structured to support modern web development practices and tools.
+My personal website built with modern web technologies. A place where I share my work, thoughts, and connect with the community.
 
-## Project Structure
+## 🚀 Quick Start
 
-```
-📦evren.dev
- ┣ 📂.github
- ┃ ┗ 📂workflows
- ┃ ┃ ┗ 📜deploy.yml
- ┣ 📂src
- ┃ ┣ 📂backend
- ┃ ┃ ┣ 📂Extensions
- ┃ ┃ ┃ ┣ 📜LanguageRouteConstraint.cs
- ┃ ┃ ┃ ┣ 📜ReCaptcha.cs
- ┃ ┃ ┃ ┗ 📜RouteDataRequestCultureProvider.cs
- ┃ ┃ ┣ 📂Localization
- ┃ ┃ ┃ ┣ 📜JsonStringLocalizer.Factory.cs
- ┃ ┃ ┃ ┗ 📜JsonStringLocalizer.cs
- ┃ ┃ ┣ 📂Middleware
- ┃ ┃ ┃ ┗ 📜LocalizationMiddleware.cs
- ┃ ┃ ┣ 📂Model
- ┃ ┃ ┃ ┣ 📜AhaSendRequest.cs
- ┃ ┃ ┃ ┣ 📜AhaSendResponse.cs
- ┃ ┃ ┃ ┣ 📜FormRequest.cs
- ┃ ┃ ┃ ┗ 📜JsonResponse.cs
- ┃ ┃ ┣ 📂Properties
- ┃ ┃ ┃ ┗ 📜launchSettings.json
- ┃ ┃ ┣ 📂Resources
- ┃ ┃ ┃ ┣ 📜de.json
- ┃ ┃ ┃ ┗ 📜en.json
- ┃ ┃ ┣ 📜Program.cs
- ┃ ┃ ┣ 📜Secret.json
- ┃ ┃ ┣ 📜SendMailApi.csproj
- ┃ ┃ ┣ 📜appsettings.Development.json
- ┃ ┃ ┗ 📜appsettings.json
- ┃ ┣ 📂frontend
- ┃ ┃ ┣ 📂public
- ┃ ┃ ┃ ┗ 📜favicon.svg
- ┃ ┃ ┣ 📂src
- ┃ ┃ ┃ ┣ 📂assets
- ┃ ┃ ┃ ┃ ┣ 📂css
- ┃ ┃ ┃ ┃ ┃ ┣ 📜_base.scss
- ┃ ┃ ┃ ┃ ┃ ┣ 📜_fonts.scss
- ┃ ┃ ┃ ┃ ┃ ┣ 📜_reset.scss
- ┃ ┃ ┃ ┃ ┃ ┣ 📜_utilities.scss
- ┃ ┃ ┃ ┃ ┃ ┗ 📜main.scss
- ┃ ┃ ┃ ┃ ┣ 📂documents
- ┃ ┃ ┃ ┃ ┃ ┗ 📜Evren_Yeniev_CV.pdf
- ┃ ┃ ┃ ┃ ┣ 📂icons
- ┃ ┃ ┃ ┃ ┃ ┣ 📜github.svg
- ┃ ┃ ┃ ┃ ┃ ┣ 📜icon-error.svg
- ┃ ┃ ┃ ┃ ┃ ┣ 📜leetcode.svg
- ┃ ┃ ┃ ┃ ┃ ┣ 📜linkedin.svg
- ┃ ┃ ┃ ┃ ┃ ┣ 📜times.svg
- ┃ ┃ ┃ ┃ ┃ ┗ 📜twitter.svg
- ┃ ┃ ┃ ┃ ┣ 📂images
- ┃ ┃ ┃ ┃ ┃ ┣ 📂about-me
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜evren-yeniev.webp
- ┃ ┃ ┃ ┃ ┃ ┣ 📂works
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂goztepe
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜1.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜2.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜3.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜4.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂onarim
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜1.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜2.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜3.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜4.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂thenbaexhibition
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜1.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜2.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜3.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜4.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂turmepa
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜1.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜2.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜3.png
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜4.png
- ┃ ┃ ┃ ┣ 📂components
- ┃ ┃ ┃ ┃ ┣ 📂footer
- ┃ ┃ ┃ ┃ ┃ ┗ 📜PageFooter.vue
- ┃ ┃ ┃ ┃ ┣ 📂header
- ┃ ┃ ┃ ┃ ┃ ┣ 📂desktop
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜DesktopHeader.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📂mobile
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MobileHeader.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MobileMenu.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MobileMenuButton.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜MobileTopbar.vue
- ┃ ┃ ┃ ┃ ┃ ┗ 📂shared
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜LocaleSwitcher.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜MenuItems.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜TextLogo.vue
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┃ ┣ 📂layout
- ┃ ┃ ┃ ┃ ┃ ┣ 📜PageBorders.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜PageContent.vue
- ┃ ┃ ┃ ┃ ┃ ┗ 📜PreLoader.vue
- ┃ ┃ ┃ ┃ ┣ 📂shared
- ┃ ┃ ┃ ┃ ┃ ┣ 📜DynamicImage.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜EmailLink.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜PageTitle.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜SocialMediaAccounts.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜SvgIcon.vue
- ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┣ 📂plugins
- ┃ ┃ ┃ ┃ ┣ 📂i18n
- ┃ ┃ ┃ ┃ ┃ ┣ 📂locales
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜de.json
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜en.json
- ┃ ┃ ┃ ┃ ┃ ┣ 📂rules
- ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜datetimes.js
- ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜numbers.js
- ┃ ┃ ┃ ┃ ┃ ┣ 📜index.js
- ┃ ┃ ┃ ┃ ┃ ┗ 📜translation.js
- ┃ ┃ ┃ ┃ ┣ 📜axios.js
- ┃ ┃ ┃ ┃ ┣ 📜index.js
- ┃ ┃ ┃ ┃ ┗ 📜pinia.js
- ┃ ┃ ┃ ┣ 📂router
- ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┣ 📂stores
- ┃ ┃ ┃ ┃ ┣ 📜app.store.js
- ┃ ┃ ┃ ┃ ┣ 📜index.js
- ┃ ┃ ┃ ┃ ┗ 📜mail.store.js
- ┃ ┃ ┃ ┣ 📂views
- ┃ ┃ ┃ ┃ ┣ 📂about
- ┃ ┃ ┃ ┃ ┃ ┣ 📜AboutView.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜BiographyContent.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜DownloadCvButton.vue
- ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┃ ┣ 📂contact
- ┃ ┃ ┃ ┃ ┃ ┣ 📜ContactForm.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜ContactView.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜InfoList.vue
- ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┃ ┣ 📂home
- ┃ ┃ ┃ ┃ ┃ ┗ 📜HomeView.vue
- ┃ ┃ ┃ ┃ ┗ 📂works
- ┃ ┃ ┃ ┃ ┃ ┣ 📜ModalBox.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜PreviewImage.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜WorkDetails.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜WorkItem.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜WorksList.vue
- ┃ ┃ ┃ ┃ ┃ ┣ 📜WorksView.vue
- ┃ ┃ ┃ ┃ ┃ ┗ 📜index.js
- ┃ ┃ ┃ ┣ 📜App.vue
- ┃ ┃ ┃ ┗ 📜main.js
- ┃ ┃ ┣ 📜.editorconfig
- ┃ ┃ ┣ 📜.env
- ┃ ┃ ┣ 📜.env.development
- ┃ ┃ ┣ 📜.gitignore
- ┃ ┃ ┣ 📜.prettierrc.json
- ┃ ┃ ┣ 📜README.md
- ┃ ┃ ┣ 📜eslint.config.js
- ┃ ┃ ┣ 📜index.html
- ┃ ┃ ┣ 📜jsconfig.json
- ┃ ┃ ┣ 📜package-lock.json
- ┃ ┃ ┣ 📜package.json
- ┃ ┃ ┣ 📜vite.config.js
- ┃ ┃ ┗ 📜vitest.config.js
- ┣ 📜.editorconfig
- ┣ 📜.gitignore
- ┣ 📜.secrets
- ┣ 📜CNAME
- ┣ 📜README.md
- ┗ 📜evren.dev.sln
+### Frontend (Vue.js)
+```bash
+cd src/frontend
+npm install
+npm run dev
 ```
 
-## Technologies Used
+### Backend (ASP.NET Core)
+```bash
+cd src/backend
+dotnet restore
+dotnet run
+```
 
-### Frontend
+## 🛠️ Tech Stack
 
-- **Vue.js**: A progressive JavaScript framework for building user interfaces.
-- **Pinia**: State management library for Vue.js.
-- **Vue Router**: Official router for Vue.js.
-- **Vue I18n**: Internationalization plugin for Vue.js.
-- **Vite**: Build tool for modern web projects.
-- **SASS**: CSS preprocessor.
-- **ESLint**: Linting tool for JavaScript and Vue files.
-- **Prettier**: Code formatter.
-- **Vitest**: Unit testing framework.
-- **Axios**: HTTP client for making API requests.
-- **Animate.css**: Library of cross-browser animations.
-- **vee-validate**: Form validation library.
-- **vue-recaptcha**: Component for Google reCAPTCHA.
+**Frontend:**
+- Vue.js 3 + Composition API
+- Vite for blazing fast development
+- SCSS for styling
+- i18n for multilingual support
 
-### Backend
+**Backend:**
+- ASP.NET Core 8
+- RESTful API design
+- JSON localization
+- Email service integration
 
-- **ASP.NET Core**: Framework for building modern, cloud-based, internet-connected applications.
-- **C#**: Programming language used for the backend.
-- **Newtonsoft.Json**: JSON framework for .NET.
-- **NSwag.AspNetCore**: Library for generating OpenAPI documentation and client code.
-- **ReCaptcha**: Service for protecting websites from spam and abuse.
-- **Localization**: Custom localization using JSON files and middleware.
+## 📦 What's Inside
 
-### Deployment and Configuration
+- 🌍 **Multilingual support** (EN/DE)
+- 📱 **Responsive design** for all devices
+- 📧 **Contact form** with email integration
+- 🎨 **Portfolio showcase** of my work
+- 🔧 **Automated deployment** via GitHub Actions
 
-- **GitHub Actions**: Continuous integration and deployment.
-- **Docker**: Containerization (mentioned in the project description for some frontend projects).
-- **Environment Variables**: Managed using `.env` files.
+## 🔄 Deployment
 
-## Key Components
+The project automatically deploys to production when pushing to the main branch:
+- Frontend → `evren.dev`
+- Backend API → `api.evren.dev`
 
-### Backend
+For manual deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
-- **Localization**: Handled by `JsonStringLocalizer` and
+## 📝 Development Scripts
 
-JsonStringLocalizerFactory
+```bash
+# Frontend
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run deploy       # Build and deploy via FTP
 
-in
+# Backend
+dotnet run           # Start development server
+dotnet publish       # Build for production
+```
 
-Localization
+## 🤝 Contributing
 
-.
+This is my personal website, but I'm always open to suggestions and improvements! Feel free to:
+- Report bugs
+- Suggest new features
+- Share feedback
 
-- **Middleware**: Includes
+## 📄 License
 
-LocalizationMiddleware
+This project is open source and available under the MIT License.
 
-in
+---
 
-Middleware
-
-.
-
-- **Program.cs**: Main entry point for the backend application in
-
-Program.cs
-
-.
-
-### Frontend
-
-- **Main Configuration**: Vite configuration in
-
-vite.config.js
-
-.
-
-- **ESLint Configuration**: Linting setup in
-
-eslint.config.js
-
-.
-
-- **Prettier Configuration**: Code formatting setup in
-
-.prettierrc.json
-
-.
-
-- **Localization**: Handled by Vue I18n with locale files in
-
-locales
-
-.
-
-## Deployment
-
-The project uses GitHub Actions to automate the deployment of the frontend to GitHub Pages. The workflow is defined in
-
-deploy.yml
-
-.
-
-## Configuration
-
-- **.editorconfig**: Defines coding styles and conventions.
-- **.gitignore**: Specifies files and directories to be ignored by Git.
-- **launchSettings.json**: Contains settings for launching the backend application.
-
-## Running the Project
-
-### Frontend
-
-1. **Install Dependencies**:
-
-   ```sh
-   npm install
-   ```
-
-2. **Compile and Hot-Reload for Development**:
-
-   ```sh
-   npm run dev
-   ```
-
-3. **Compile and Minify for Production**:
-
-   ```sh
-   npm run build
-   ```
-
-4. **Run Unit Tests**:
-
-   ```sh
-   npm run test:unit
-   ```
-
-5. **Lint with ESLint**:
-   ```sh
-   npm run lint
-   ```
-
-### Backend
-
-1. **Build and Run**:
-   Open the solution file
-
-evren.dev.sln
-
-in Visual Studio and run the project.
-
-## Summary
-
-Evren.Dev is a comprehensive full-stack web application that leverages modern web development technologies and tools. It includes a Vue.js frontend and an ASP.NET Core backend, with features such as localization, form validation, and automated deployment. The project is well-structured and configured to support efficient development and deployment workflows.
+Built with ❤️ by Evren Yeniev
