@@ -11,11 +11,6 @@ import SvgIcon from "./SvgIcon.vue"
         </a>
       </li>
       <li>
-        <a href="https://leetcode.com/u/evrendev/" target="_blank">
-          <svg-icon name="leetcode" />
-        </a>
-      </li>
-      <li>
         <a href="https://www.linkedin.com/in/evrenyeniev/" target="_blank">
           <svg-icon name="linkedin" />
         </a>
