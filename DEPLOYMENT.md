@@ -8,7 +8,7 @@ This guide contains the necessary steps to automatically deploy your Vue.js fron
 
 ```bash
 cd src/frontend
-npm install
+npm install  # This will create package-lock.json automatically
 ```
 
 ### 2. Backend Dependencies (for macOS)
