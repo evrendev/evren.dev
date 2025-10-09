@@ -3,20 +3,21 @@ name: Deploy to Production
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
+  workflow_dispatch:  # Manuel tetikleme için
 
 jobs:
   # Frontend Deployment
   deploy-frontend:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "18"
+          # Cache'i tamamen kaldırdık
 
       - name: Install dependencies
         working-directory: src/frontend
@@ -44,7 +45,8 @@ jobs:
   deploy-backend:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
