@@ -33,14 +33,16 @@ jobs:
       - name: Check build output
         working-directory: src/frontend
         run: |
-          echo "Build completed. Checking dist folder..."
+          echo "=== Build Output Check ==="
           ls -la dist/
-          echo "Checking index.html content..."
-          head -30 dist/index.html
-          echo "Checking JavaScript files..."
-          find dist -name "*.js" -type f | head -5
-          echo "Checking CSS files..."
-          find dist -name "*.css" -type f | head -5
+          echo "=== Index.html Head ==="
+          head -40 dist/index.html
+          echo "=== Index.html Tail ==="
+          tail -10 dist/index.html
+          echo "=== JavaScript Files ==="
+          find dist -name "*.js" -type f -exec basename {} \; | head -10
+          echo "=== Checking main JS content ==="
+          find dist -name "index-*.js" -type f -exec head -3 {} \;
 
       - name: Deploy to FTP (Frontend)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
