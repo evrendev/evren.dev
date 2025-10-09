@@ -1,8 +1,8 @@
 {
   "appTitle": "Evren.Dev",
-  "logo": "@:appTitle logo",
+  "logo": "@:appTitle Logo",
   "locale": {
-    "en": "English",
+    "en": "Englisch",
     "de": "Deutsch"
   },
   "components": {
@@ -13,15 +13,15 @@
       },
       "about": {
         "text": "Über mich",
-        "url": "uber-mich"
+        "url": "about-me"
       },
       "works": {
         "text": "Projekte",
-        "url": "projekte"
+        "url": "works"
       },
       "contact": {
         "text": "Kontakt",
-        "url": "kontakt"
+        "url": "contact"
       },
       "back": "Zurück"
     }
@@ -30,31 +30,31 @@
     "home": {
       "meta": {
         "title": "Startseite",
-        "description": "Ich bin ein Fullstack Developer mit über 20 Jahren Erfahrung in der IT-Branche und spezialisiert auf die Entwicklung maßgeschneiderter Webanwendungen und digitaler Lösungen. Mein Fokus liegt darauf, Unternehmen und Organisationen dabei zu helfen, ihre Effizienz durch die Automatisierung komplexer Prozesse zu steigern. Ich erwecke Ideen mit modernen Technologien zum Leben und arbeite dabei hauptsächlich mit dem .NET-Ökosystem und Vue.js.",
-        "keywords": "Softwareentwickler, Webentwickler, Full-Stack-Entwickler, Webtechnologien, Webanwendungen, Websites, moderne Technologien"
+        "description": "Ich bin Fullstack .NET Entwickler mit einer Leidenschaft dafür, moderne, effiziente Weblösungen zu schaffen. Mit über zwei Jahrzehnten in der IT und Jahren praktischer Softwareerfahrung verwandle ich komplexe Herausforderungen in saubere, funktionale digitale Produkte.",
+        "keywords": "Fullstack Entwickler, .NET Entwickler, Vue.js, Webanwendungen, Softwareentwicklung, digitale Lösungen"
       },
       "title": "Startseite",
       "get-in-touch": "Kontakt aufnehmen",
-      "description": "Ich bin ein Fullstack Developer mit über 20 Jahren Erfahrung in der IT-Branche und spezialisiert auf die Entwicklung maßgeschneiderter Webanwendungen und digitaler Lösungen. Mein Fokus liegt darauf, Unternehmen und Organisationen dabei zu helfen, ihre Effizienz durch die Automatisierung komplexer Prozesse zu steigern. Ich erwecke Ideen mit modernen Technologien zum Leben und arbeite dabei hauptsächlich mit dem .NET-Ökosystem und Vue.js."
+      "description": "Hallo, ich bin Evren — Fullstack .NET Entwickler, der gerne praktische, schön gestaltete Webanwendungen baut. Mit mehr als 20 Jahren in der IT-Welt konzentriere ich mich darauf, zuverlässige digitale Werkzeuge zu schaffen, die Arbeitsabläufe vereinfachen und Unternehmen voranbringen."
     },
     "about": {
       "meta": {
         "title": "Über mich",
-        "description": "Meine Karriere in der Technologie begann in der System- und Netzwerkadministration, wo ich über sieben Jahre lang ein starkes Fundament in der IT-Infrastruktur aufgebaut habe. Angetrieben von der Leidenschaft, Lösungen zu entwickeln, verlagerte ich meinen Schwerpunkt auf die Softwareentwicklung. Seit über einem Jahrzehnt bin ich als freiberuflicher Entwickler und IT-Berater tätig und arbeite mit vielfältigen Organisationen wie Sportvereinen und gemeinnützigen Organisationen zusammen. Ich bin darauf spezialisiert, komplexe Geschäftsanforderungen in effiziente, durchgängige digitale Lösungen umzuwandeln – von umfassenden E-Learning-Plattformen bis hin zu automatisierten Systemen, die ganze manuelle Arbeitsabläufe ersetzen. Technisch beherrsche ich die Backend-Entwicklung mit C# / .NET und sowohl MS SQL als auch PostgreSQL, während ich im Frontend mit modernen Frameworks wie Vue.js und TypeScript glänze. Ich widme mich der Entwicklung benutzerorientierter und wartbarer Anwendungen und habe Freude daran, innovative Ideen vom Konzept bis zur finalen Umsetzung zu begleiten.",
-        "keywords": "Softwareentwickler, Webentwickler, Full-Stack-Entwickler, Webtechnologien, Webanwendungen, Websites, moderne Technologien"
+        "description": "Ich bin Fullstack Entwickler mit einem soliden Hintergrund in Systemadministration und Softwaretechnik. Im Laufe der Zeit habe ich kundenspezifische Web- und Mobile-Anwendungen mit .NET, Vue.js und modernen Cloud-Technologien entwickelt – und Organisationen dabei geholfen, Ideen in skalierbare digitale Lösungen zu verwandeln.",
+        "keywords": "Evren Yeniev, Fullstack Entwickler, .NET, Vue.js, C#, JavaScript, Softwareingenieur, Webanwendungen"
       },
       "title": "Über mich",
       "biography": {
         "title": "Biografie",
-        "content": "Hallo, mein Name ist Evren Yeniev. Ich begann meine Karriere mit einem Schwerpunkt auf Server- und Netzwerksysteme und sammelte über 12 Jahre Erfahrung in diesem Bereich. Später führte mich mein Interesse an Programmierung zu einem Studium in Software Engineering, wodurch ich mich auf den Bereich der web-basierten Software konzentrierte, in dem ich nun seit 9 Jahren tätig bin. Im Backend arbeite ich hauptsächlich mit ASP.NET und ASP.NET Core zusammen mit MS SQL, während mein Frontend-Toolkit HTML5, CSS3, JavaScript, jQuery und Vue.js umfasst. Ich lege großen Wert darauf, sauberen und wartbaren Code zu schreiben und halte mich strikt an Designprinzipien, um sicherzustellen, dass meine Arbeit sowohl effizient als auch optisch ansprechend ist. Meine Leidenschaft liegt in der Entwicklung von responsiven, benutzerfreundlichen Webanwendungen, die modernen Standards für Funktionalität und Leistung entsprechen. Ob es darum geht, eine einfache Website oder eine komplexe Anwendung zu erstellen – ich strebe danach, innovative Ideen mit Präzision und Liebe zum Detail zum Leben zu erwecken.",
+        "content": "Hallo, ich bin Evren Yeniev – ein Fullstack .NET Entwickler mit Sitz in Deutschland. Meine Reise begann in der System- und Netzwerkadministration, wo ich eine solide Basis in IT-Infrastruktur aufgebaut habe. Mit der Zeit führte mich meine Neugier fürs Programmieren zur Softwareentwicklung. In den letzten Jahren entwerfe und entwickle ich Web- und Mobile-Lösungen, die Unternehmen helfen, intelligenter zu arbeiten. Ich verwandle Ideen in digitale Produkte mit Technologien wie C#, .NET Core und Vue.js – stets mit Fokus auf sauberen, wartbaren Code und großartigen Nutzererlebnissen.",
         "download-cv": "Lebenslauf herunterladen"
       }
     },
     "works": {
       "meta": {
         "title": "Projekte",
-        "description": "Entdecken Sie das Portfolio von Evren Yeniev, einem erfahrenen Softwareentwickler mit Schwerpunkt auf ASP.NET, .NET Core, JavaScript und Vue. Erfahren Sie mehr über Projekte in verschiedenen Branchen mit Fokus auf sauberen Code, responsives Design und innovative digitale Lösungen.",
-        "keywords": "Evren Yeniev, Softwareentwickler, Portfolio, ASP.NET Core, .NET Core, JavaScript, Vue, Webentwicklung, responsives Design, digitale Lösungen, Frontend, Backend-Entwicklung, professionelles Portfolio, Softwareprojekte, sauberer Code."
+        "description": "Entdecke eine Auswahl von Projekten, die ich als Fullstack .NET Entwickler realisiert habe — von E-Learning Plattformen bis hin zu Verwaltungssystemen für Sportvereine. Jedes Projekt spiegelt meinen Fokus auf saubere Architektur, Skalierbarkeit und ein nahtloses Nutzererlebnis wider.",
+        "keywords": "Evren Yeniev, .NET Entwickler, Vue.js, Softwareprojekte, Webentwicklung, Fullstack Entwickler, Portfolio, saubere Architektur, digitale Lösungen"
       },
       "title": "Projekte",
       "info": {
@@ -68,46 +68,58 @@
           "title": "Göztepe Sportverein",
           "client": "Göztepe",
           "category": "Webentwicklung",
-          "description": "Für die Website des Göztepe Sportvereins habe ich eine robuste und skalierbare Infrastruktur entwickelt, um sowohl die Website als auch die mobile Anwendung zu verwalten. Im Backend habe ich .NET Core Web API, Docker und MS SQL verwendet, um ein leistungsfähiges, sicheres und flexibles System zu gewährleisten. Das Frontend wurde mit Vue.js, SASS, TypeScript, Pinia, Docker und Jest erstellt, um ein responsives und interaktives Benutzererlebnis zu bieten. Diese Plattform ermöglicht eine nahtlose Verwaltung aller Sportabteilungen und Teams, einschließlich Athleten, Spiele und relevanter Tabellen oder Turnierergebnisse. Außerdem beinhaltet sie eine zugängliche Ticketorganisation für Fans mit Behinderungen sowie die Gestaltung aller interaktiven Umfragen und Formulare, was eine umfassende digitale Lösung für die Bedürfnisse des Vereins bietet."
+          "description": "Offizielle Webseite und Backend-System für den Sportverein Göztepe entwickelt — eine dynamische Plattform, die alle Sportabteilungen unter einem digitalen Dach verbindet. Realisiert mit .NET Core, Vue.js und Docker, ermöglicht sie Echtzeit-Inhaltsverwaltung, Spielverfolgung und interaktive Fan-Engagement-Tools."
         },
         "onarim": {
           "title": "Onarim GmbH",
           "client": "Onarim",
           "category": "Webentwicklung",
-          "description": "Für die Website der Onarim GmbH, die Kunden in der Türkei und Deutschland betreut, habe ich eine vollständig responsive, mehrsprachige Plattform entwickelt, die mit allen Geräten kompatibel ist. Die Website wurde unter Verwendung von Figma für das Design aller Komponenten und Layouts sowie mit .NET Core Web API, Vue und SASS implementiert. Diese Kombination gewährleistet eine reibungslose Anpassung an verschiedene Bildschirmgrößen und bietet ein benutzerfreundliches Erlebnis. Das Ergebnis ist eine moderne, zweisprachige digitale Präsenz, die die internationale Reichweite und das Qualitätsbewusstsein von Onarim GmbH effektiv unterstützt."
+          "description": "Eine mehrsprachige, vollständig responsive Unternehmenswebsite für Onarim GmbH entworfen und umgesetzt. Mit .NET Core, Vue.js und SASS wurde ein sauberes und modernes Webauftreten geschaffen, das sowohl deutsch- als auch türkischsprachige Zielgruppen auf allen Geräten mühelos unterstützt."
         },
         "turmepa": {
           "title": "Turmepa Web Akademie",
           "client": "Turmepa",
           "category": "Webentwicklung",
-          "description": "Für die Website der Deniz Temiz Association (TURMEPA), die das Bewusstsein für die Nachhaltigkeitsziele und den Klimawandel schärfen und den Zugang zu verlässlichen Informationen ermöglichen soll, habe ich eine vollständig responsive, gerätekompatible Plattform implementiert. Die Seite enthält PDF-Dokumente, die sicher gespeichert und online veröffentlicht werden, sowie eine Video-Integration über YouTube, die über ein benutzerfreundliches Admin-Panel verwaltet wird. Die Plattform wurde mit .NET Core Web API, JavaScript, SASS und Docker entwickelt und gewährleistet eine nahtlose Verwaltung und Nutzung auf verschiedenen Geräten, unterstützt TURMEPAs Mission mit sowohl Zugänglichkeit als auch Zuverlässigkeit."
+          "description": "Eine Bildungsplattform für TURMEPA erstellt — eine Non-Profit-Organisation mit Fokus auf Meeresschutz und Nachhaltigkeit. Die Seite bietet sicheren Dokumentenzugang, Video-Integration und ein einfaches Admin-Dashboard und verbindet Zugänglichkeit mit Umweltbewusstsein."
         },
         "thenbaexhibition": {
           "title": "The NBA Exhibition",
           "client": "Muse",
           "category": "Webentwicklung",
-          "description": "Für die Website The NBA Exhibition, die sich auf den Lifestyle, die Kultur und die Geschichte der National Basketball Association konzentriert, habe ich das vollständige Figma-Design – bestehend aus allen Komponenten und Seiten – in eine Single-Page-Anwendung umgewandelt. Die Seite wurde mit JavaScript und SASS erstellt und bringt die visuelle Attraktivität der Ausstellung mit einem reibungslosen, ansprechenden Benutzererlebnis zum Leben. Dieses schlanke Design fängt das Wesen der NBA effektiv ein und bietet den Besuchern ein immersives, kohärentes digitales Erlebnis, das die dynamischen Inhalte und die Erzählweise der Ausstellung widerspiegelt."
+          "description": "Das vollständige Figma-Design der NBA Exhibition in eine schnelle, interaktive einseitige Seite umgesetzt. Mit JavaScript und SASS entwickelt, fängt sie die Energie der NBA-Kultur und Geschichte durch flüssige visuelle Effekte und einen ansprechenden Nutzerfluss ein."
+        },
+        "pdtacademy": {
+          "title": "PDT Gabelstapler Academy",
+          "client": "PDT Academy",
+          "category": "Webentwicklung",
+          "description": "Eine interaktive E-Learning Plattform für Staplerschein Zertifizierungen entwickelt. Das System umfasst Online-Prüfungen, sichere Zahlungen und Kursverfolgung — alles betrieben mit .NET, Vue.js und PostgreSQL, und bietet eine vollständige digitale Trainingslösung."
+        },
+        "helpdunya": {
+          "title": "Help Dunya",
+          "client": "Help Dunya",
+          "category": "Automatisierung",
+          "description": "Komplexe Projekt-Tracking Arbeitsabläufe für eine deutsche Non-Profit-Organisation mit Power Automate und .NET automatisiert. Die Lösung reduzierte manuelle Dateneingabe und beseitigte redundante Aufgaben, wodurch jährlich Hunderte Arbeitsstunden eingespart wurden."
         }
       }
     },
     "contact": {
       "meta": {
         "title": "Kontakt",
-        "description": "Kontaktieren Sie Evren Yeniev, einen professionellen Softwareentwickler mit Spezialisierung auf ASP.NET, .NET Core und JavaScript. Für Anfragen, Kooperationen oder weitere Informationen über seine Arbeit und Dienstleistungen.",
-        "keywords": "Kontakt Evren Yeniev, Softwareentwickler Kontakt, Anfragen, Kooperation, ASP.NET, .NET Core, JavaScript, Webentwicklung Kontakt, Portfolio Kontakt, Softwareentwicklung."
+        "description": "Nimm Kontakt auf mit Evren Yeniev, einem professionellen Softwareentwickler spezialisiert auf ASP.NET, .NET Core und JavaScript. Für Anfragen, Zusammenarbeit oder mehr über seine Arbeit und Leistungen zu erfahren.",
+        "keywords": "Kontakt Evren Yeniev, Softwareentwickler Kontakt, Anfragen, Zusammenarbeit, ASP.NET, .NET Core, JavaScript, Webentwicklung Kontakt, Portfolio Kontakt, Softwareentwicklung"
       },
       "title": "Kontakt",
       "form": {
         "name": {
           "text": "Name",
-          "placeholder": "Geben Sie Ihren Namen ein",
-          "required": "Sie müssen Ihren Vor- und Nachnamen eingeben"
+          "placeholder": "Gib deinen Namen ein",
+          "required": "Du musst deinen Vor- und Nachnamen eingeben"
         },
         "email": {
           "text": "E-Mail",
-          "placeholder": "Geben Sie Ihre E-Mail-Adresse ein",
-          "required": "Sie müssen Ihre E-Mail-Adresse eingeben",
-          "invalid": "Ihre E-Mail-Adresse scheint ungültig zu sein"
+          "placeholder": "Gib deine E-Mail Adresse ein",
+          "required": "Du musst deine E-Mail Adresse eingeben",
+          "invalid": "Deine E-Mail Adresse scheint ungültig zu sein"
         },
         "phone": {
           "text": "Telefon",
@@ -115,22 +127,22 @@
         },
         "subject": {
           "text": "Betreff",
-          "placeholder": "Betreff eingeben",
-          "required": "Sie müssen einen Betreff eingeben"
+          "placeholder": "Gib den Betreff ein",
+          "required": "Du musst den Betreff eingeben"
         },
         "message": {
           "text": "Nachricht",
-          "placeholder": "Schreiben Sie hier Ihre Frage",
-          "required": "Sie müssen eine Nachricht eingeben"
+          "placeholder": "Schreibe hier deine Nachricht",
+          "required": "Du musst deine Nachricht eingeben"
         },
         "captcha": {
-          "expired": "Verifizierung abgelaufen. Aktivieren Sie das Kontrollkästchen erneut",
-          "required": "Sie müssen bestätigen, dass Sie kein Roboter sind"
+          "expired": "Verifizierung abgelaufen. Bitte das Kästchen erneut anklicken",
+          "required": "Du musst bestätigen, dass du kein Roboter bist"
         },
         "send": "Nachricht senden"
       },
       "get-in-touch": "Kontakt aufnehmen",
-      "follow-me": "Folgen Sie mir",
+      "follow-me": "Folge mir",
       "email": {
         "title": "E-Mail",
         "text": "mail[at]evren.dev",

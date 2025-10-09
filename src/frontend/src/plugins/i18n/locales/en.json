@@ -30,31 +30,31 @@
     "home": {
       "meta": {
         "title": "Home",
-        "description": "I'm a Fullstack Developer with over 20 years in the IT industry, specializing in building custom web applications and digital solutions. My focus is on helping businesses and organizations improve their efficiency by automating complex processes. I bring ideas to life using modern technologies, primarily working with the .NET ecosystem and Vue.js",
-        "keywords": "software developer, web developer, full-stack developer, web technologies, web applications, websites, modern technologies"
+        "description": "I'm a Fullstack .NET Developer with a passion for crafting modern, efficient web solutions. With over two decades in IT and years of hands-on software experience, I turn complex challenges into clean, functional digital products.",
+        "keywords": "fullstack developer, .NET developer, Vue.js, web applications, software development, digital solutions"
       },
       "title": "Home",
       "get-in-touch": "Get In Touch",
-      "description": "I'm a Fullstack Developer with over 20 years in the IT industry, specializing in building custom web applications and digital solutions. My focus is on helping businesses and organizations improve their efficiency by automating complex processes. I bring ideas to life using modern technologies, primarily working with the .NET ecosystem and Vue.js"
+      "description": "Hi, I’m Evren — a Fullstack .NET Developer who loves building practical, well-designed web applications. With more than 20 years in the IT world, I focus on creating reliable digital tools that simplify workflows and help businesses grow."
     },
     "about": {
       "meta": {
         "title": "About Me",
-        "description": "My career in technology began in system and network administration, where I built a strong foundation in IT infrastructure over seven years. Driven by a passion for creating solutions, I transitioned my focus to software development. For over a decade, I've operated as a freelance developer and IT consultant, collaborating with diverse organizations like sports clubs and non-profits. I specialize in transforming complex business requirements into efficient, end-to-end digital solutions—from comprehensive e-learning platforms to automated systems that replace entire manual workflows. Technically, I am proficient in backend development with C# / .NET and both MS SQL and PostgreSQL , while on the frontend, I excel with modern frameworks like Vue.js and TypeScript. I am dedicated to building user-centric, maintainable applications and enjoy taking innovative ideas from concept to launch.",
-        "keywords": "software developer, web developer, full-stack developer, web technologies, web applications, websites, modern technologies"
+        "description": "I'm a Fullstack Developer with a solid background in system administration and software engineering. Over the years, I’ve built custom web and mobile applications using .NET, Vue.js, and modern cloud technologies — helping organizations transform ideas into scalable digital solutions.",
+        "keywords": "Evren Yeniev, fullstack developer, .NET, Vue.js, C#, JavaScript, software engineer, web applications"
       },
       "title": "About Me",
       "biography": {
         "title": "Biography",
-        "content": "Hello, my name is Evren Yeniev. I began my career specializing in server and network systems, gaining expertise in this field over 12 years. Later, my interest in programming led me to pursue a degree in software engineering, shifting my focus to the web-based software field, where I’ve now been working for the past 9 years. On the backend, I primarily work with ASP.NET and ASP.NET Core alongside MS SQL, while my frontend toolkit includes HTML5, CSS3, JavaScript, jQuery, and Vue.js. I’m committed to writing clean, maintainable code and strictly adhere to design principles to ensure my work is both efficient and visually appealing. My passion lies in building responsive, user-friendly web applications that meet modern standards for functionality and performance. Whether it’s creating a straightforward website or a complex application, I strive to bring innovative ideas to life with precision and attention to detail.",
+        "content": "Hello, I’m Evren Yeniev — a Fullstack .NET Developer based in Germany. My journey started in system and network administration, where I built a strong foundation in IT infrastructure. Over time, my curiosity for coding led me to shift into software development. For the past several years, I’ve been designing and developing web and mobile solutions that help businesses work smarter. I enjoy transforming ideas into digital products using technologies like C#, .NET Core, and Vue.js — always focusing on clean, maintainable code and great user experience.",
         "download-cv": "Download CV"
       }
     },
     "works": {
       "meta": {
         "title": "Works",
-        "description": "Discover the portfolio of Evren Yeniev, an experienced software developer specializing in ASP.NET, .NET Core, JavaScript, and Vue. Explore projects across various industries with a focus on clean code, responsive design, and innovative digital solutions.",
-        "keywords": "Evren Yeniev, software developer, portfolio, ASP.NET Core, .NET Core, JavaScript, Vue, web development, responsive design, digital solutions, frontend, backend development, professional portfolio, software projects, clean code."
+        "description": "Explore a selection of projects I’ve built as a Fullstack .NET Developer — from e-learning platforms to sports club management systems. Each project reflects my focus on clean architecture, scalability, and a seamless user experience.",
+        "keywords": "Evren Yeniev, .NET developer, Vue.js, software projects, web development, fullstack developer, portfolio, clean architecture, digital solutions"
       },
       "title": "Works",
       "info": {
@@ -68,25 +68,37 @@
           "title": "Göztepe Sports Club",
           "client": "Göztepe",
           "category": "Web Development",
-          "description": "For the Göztepe Sports Club website, I developed a robust and scalable infrastructure to manage both the website and mobile application. On the backend, I utilized .NET Core Web API, Docker, and MS SQL to ensure a powerful, secure, and flexible system. The frontend is built with Vue.js, SASS, TypeScript, Pinia, Docker, and Jest to deliver a responsive and interactive user experience. This platform allows seamless management of all sports departments and teams, covering athletes, matches, and related standings or tournament results. Additionally, it includes accessible ticket organization for disabled fans, as well as the design of all interactive surveys and forms, providing a comprehensive digital solution for the club’s needs."
+          "description": "Developed the official website and backend system for Göztepe Sports Club — a dynamic platform that connects all sports departments under one digital roof. Built with .NET Core, Vue.js, and Docker, it enables real-time content management, match tracking, and interactive fan engagement tools."
         },
         "onarim": {
           "title": "Onarim GmbH",
           "client": "Onarim",
           "category": "Web Development",
-          "description": "For the Onarim GmbH website, serving clients in Turkey and Germany, I designed and developed a fully responsive, multi-language platform compatible with all devices. Using Figma for all component and layout designs, I implemented the website with .NET Core Web API, Vue, and SASS technologies. This combination ensures seamless adaptability across various screen sizes and provides a smooth, user-friendly experience. The result is a modern, bilingual digital presence that effectively supports Onarim GmbH’s international reach and commitment to quality service."
+          "description": "Designed and implemented a bilingual, fully responsive corporate website for Onarim GmbH. Using .NET Core, Vue.js, and SASS, I delivered a clean and modern web presence that supports both German and Turkish audiences effortlessly across all devices."
         },
         "turmepa": {
           "title": "Turmepa Web Akademi",
           "client": "Turmepa",
           "category": "Web Development",
-          "description": "For the Deniz Temiz Association (TURMEPA) website, designed to raise awareness about the Sustainable Development Goals and climate change and to provide access to reliable information, I implemented a fully responsive, device-compatible platform. The site features PDF documents that are securely stored and published online, along with video integration through YouTube, all managed through a user-friendly admin panel. Built with .NET Core Web API, JavaScript, SASS, and Docker, the platform ensures seamless management and access across various devices, supporting TURMEPA’s mission with both accessibility and reliability."
+          "description": "Built an educational web platform for TURMEPA — a non-profit focused on marine conservation and sustainability. The site provides secure document access, video integration, and a simple admin dashboard, combining accessibility with environmental impact."
         },
         "thenbaexhibition": {
           "title": "The NBA Exhibition",
           "client": "Muse",
           "category": "Web Development",
-          "description": "For The NBA Exhibition website, focusing on the lifestyle, culture, and history of the National Basketball Association, I transformed the complete Figma design—comprising all components and pages—into a single-page application. Built using JavaScript and SASS, the site brings the exhibition’s visual appeal to life with a smooth, engaging user experience. This streamlined design effectively captures the essence of the NBA, providing visitors with an immersive, cohesive digital experience that mirrors the exhibition’s dynamic content and storytelling."
+          "description": "Transformed the complete Figma design of The NBA Exhibition into a fast, interactive single-page site. Developed with JavaScript and SASS, it captures the energy of the NBA’s culture and history through smooth visuals and an engaging user flow."
+        },
+        "pdtacademy": {
+          "title": "PDT Gabelstapler Academy",
+          "client": "PDT Academy",
+          "category": "Web Development",
+          "description": "Developed an interactive e-learning platform for forklift certification. The system features online exams, secure payments, and course tracking — all powered by .NET, Vue.js, and PostgreSQL, providing a complete digital training solution."
+        },
+        "helpdunya": {
+          "title": "Help Dunya",
+          "client": "Help Dunya",
+          "category": "Automation",
+          "description": "Automated complex project-tracking workflows for a German non-profit using Power Automate and .NET. The solution reduced manual data entry and eliminated redundant tasks, saving hundreds of hours annually."
         }
       }
     },
